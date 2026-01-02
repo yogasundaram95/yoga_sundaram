@@ -1,14 +1,17 @@
+import { lazy, Suspense } from "react";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Experience from "@/components/Experience";
-import Projects from "@/components/Projects";
-import Testimonials from "@/components/Testimonials";
-import Skills from "@/components/Skills";
-import Education from "@/components/Education";
-import Certifications from "@/components/Certifications";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+
+// Lazy load below-the-fold components to reduce initial bundle size
+const About = lazy(() => import("@/components/About"));
+const Experience = lazy(() => import("@/components/Experience"));
+const Projects = lazy(() => import("@/components/Projects"));
+const Testimonials = lazy(() => import("@/components/Testimonials"));
+const Skills = lazy(() => import("@/components/Skills"));
+const Education = lazy(() => import("@/components/Education"));
+const Certifications = lazy(() => import("@/components/Certifications"));
+const Contact = lazy(() => import("@/components/Contact"));
+const Footer = lazy(() => import("@/components/Footer"));
 
 const Index = () => {
   return (
@@ -16,16 +19,20 @@ const Index = () => {
       <Navigation />
       <main>
         <Hero />
-        <About />
-        <Experience />
-        <Projects />
-        <Testimonials />
-        <Skills />
-        <Education />
-        <Certifications />
-        <Contact />
+        <Suspense fallback={null}>
+          <About />
+          <Experience />
+          <Projects />
+          <Testimonials />
+          <Skills />
+          <Education />
+          <Certifications />
+          <Contact />
+        </Suspense>
       </main>
-      <Footer />
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
     </div>
   );
 };
