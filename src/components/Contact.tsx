@@ -45,7 +45,7 @@ const Contact = () => {
           {/* Download Resume */}
           <div className="mb-12">
             <Button variant="outline" size="lg" asChild>
-              <a href="/resume.pdf" download="Yoga_Sundaram_Resume.pdf" className="flex items-center gap-2">
+              <a href={`${import.meta.env.BASE_URL}resume.pdf`} download="Yoga_Sundaram_Resume.pdf" className="flex items-center gap-2">
                 <Download className="w-5 h-5" />
                 Download Resume
               </a>

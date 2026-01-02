@@ -69,7 +69,7 @@ const Hero = () => {
                 <a href="#contact">Get In Touch</a>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <a href="/resume.pdf" download="Yoga_Sundaram_Resume.pdf" className="flex items-center gap-2">
+                <a href={`${import.meta.env.BASE_URL}resume.pdf`} download="Yoga_Sundaram_Resume.pdf" className="flex items-center gap-2">
                   <Download className="w-5 h-5" />
                   Download Resume
                 </a>
@@ -89,7 +89,7 @@ const Hero = () => {
               {/* Photo container */}
               <div className="relative aspect-square rounded-3xl overflow-hidden border-4 border-primary/30 shadow-glow">
                 <img
-                  src="/profile.jpg"
+                  src={`${import.meta.env.BASE_URL}profile.jpg`}
                   alt="Yoga Sundaram Rama Swamy - Data Scientist"
                   className="w-full h-full object-cover object-top"
                   style={{ objectPosition: 'center 10%' }}
