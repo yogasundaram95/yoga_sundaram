@@ -1,24 +1,36 @@
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
+
 const skillCategories = [
   {
-    title: "Frontend",
-    skills: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Framer Motion"],
+    title: "Analytics & BI",
+    skills: ["Power BI", "Tableau", "QuickSight", "DAX", "KPI Dashboards"],
   },
   {
-    title: "Backend",
-    skills: ["Node.js", "Python", "PostgreSQL", "MongoDB", "GraphQL"],
+    title: "Programming & Data",
+    skills: ["SQL", "Python", "R", "Pandas", "Scikit-learn"],
   },
   {
-    title: "Tools & More",
-    skills: ["Git", "Docker", "AWS", "Figma", "CI/CD"],
+    title: "Data Platforms & ML",
+    skills: ["AWS Redshift", "SAP HANA", "ETL Pipelines", "XGBoost", "LSTM"],
   },
 ];
 
 const Skills = () => {
+  const { ref, isVisible } = useScrollAnimation();
+
   return (
-    <section id="skills" className="py-24 lg:py-32 relative bg-gradient-card">
-      <div className="container mx-auto px-6 lg:px-12">
+    <section id="skills" className="py-24 lg:py-32 relative overflow-hidden bg-gradient-card">
+      {/* Stars background */}
+      <div className="absolute inset-0 stars-bg opacity-30" />
+
+      <div className="container mx-auto px-6 lg:px-12 relative z-10">
         {/* Section header */}
-        <div className="text-center mb-16">
+        <div
+          ref={ref}
+          className={`text-center mb-16 transition-all duration-1000 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+          }`}
+        >
           <span className="text-primary font-display text-sm tracking-widest uppercase mb-4 block">
             Expertise
           </span>
@@ -39,9 +51,9 @@ const Skills = () => {
               </h3>
               <div className="flex flex-wrap gap-3">
                 {category.skills.map((skill, skillIndex) => (
-                  <span 
+                  <span
                     key={skillIndex}
-                    className="px-4 py-2 text-sm bg-secondary text-secondary-foreground rounded-lg border border-border hover:border-primary/50 hover:bg-primary/10 transition-all cursor-default"
+                    className="px-4 py-2 text-sm bg-secondary text-secondary-foreground rounded-lg border border-border hover:border-usa-white hover:bg-usa-white hover:text-background transition-all cursor-default"
                   >
                     {skill}
                   </span>

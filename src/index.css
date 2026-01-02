@@ -1,47 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
-
 @layer base {
   :root {
-    --background: 220 20% 7%;
-    --foreground: 45 20% 95%;
+    --background: 220 30% 12%;
+    --foreground: 0 0% 100%;
 
-    --card: 220 18% 10%;
-    --card-foreground: 45 20% 95%;
+    --card: 220 25% 16%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 220 18% 10%;
-    --popover-foreground: 45 20% 95%;
+    --popover: 220 25% 16%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 38 92% 55%;
-    --primary-foreground: 220 20% 7%;
+    --primary: 215 100% 55%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 15% 15%;
-    --secondary-foreground: 45 20% 95%;
+    --secondary: 0 0% 98%;
+    --secondary-foreground: 220 30% 12%;
 
-    --muted: 220 15% 18%;
-    --muted-foreground: 220 10% 55%;
+    --muted: 220 20% 22%;
+    --muted-foreground: 0 0% 85%;
 
-    --accent: 38 92% 55%;
-    --accent-foreground: 220 20% 7%;
+    --accent: 0 90% 60%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 15% 18%;
-    --input: 220 15% 18%;
-    --ring: 38 92% 55%;
+    --border: 220 20% 25%;
+    --input: 220 20% 20%;
+    --ring: 215 100% 55%;
 
     --radius: 0.75rem;
 
-    /* Custom tokens */
-    --gradient-gold: linear-gradient(135deg, hsl(38 92% 55%), hsl(28 90% 50%));
-    --gradient-dark: linear-gradient(180deg, hsl(220 20% 7%), hsl(220 18% 12%));
-    --gradient-card: linear-gradient(145deg, hsl(220 18% 12%), hsl(220 18% 8%));
-    
-    --shadow-glow: 0 0 60px hsl(38 92% 55% / 0.15);
+    /* Custom tokens - USA Flag colors (solid) */
+    --gradient-gold: hsl(215 100% 55%);
+    --color-red: hsl(0 90% 60%);
+    --color-white: hsl(0 0% 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(220 30% 12%), hsl(220 25% 16%));
+    --gradient-card: linear-gradient(145deg, hsl(220 25% 16%), hsl(220 25% 14%));
+
+    --shadow-glow: 0 0 60px hsl(215 100% 55% / 0.2);
     --shadow-card: 0 20px 40px hsl(0 0% 0% / 0.3);
     
     --font-display: 'Syne', sans-serif;
@@ -86,19 +88,41 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background;
     font-family: var(--font-body);
+    font-size: 18px;
+    color: hsl(210, 30%, 85%);
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
   }
+
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.5rem; }
+  h4 { font-size: 1.25rem; }
+  h5 { font-size: 1.125rem; }
+  h6 { font-size: 1rem; }
+  p { font-size: 1rem; line-height: 1.6; }
 }
 
 @layer utilities {
   .text-gradient {
     @apply bg-clip-text text-transparent;
     background-image: var(--gradient-gold);
+  }
+
+  .text-usa-red {
+    color: var(--color-red);
+  }
+
+  .text-usa-white {
+    color: var(--color-white);
+  }
+
+  .text-usa-blue {
+    color: var(--gradient-gold);
   }
 
   .bg-gradient-gold {
@@ -113,12 +137,61 @@
     background-image: var(--gradient-card);
   }
 
+  .bg-usa-red {
+    background-color: var(--color-red);
+  }
+
+  .bg-usa-white {
+    background-color: var(--color-white);
+  }
+
+  .bg-usa-blue {
+    background-color: var(--gradient-gold);
+  }
+
+  .border-usa-red {
+    border-color: var(--color-red);
+  }
+
+  .border-usa-white {
+    border-color: var(--color-white);
+  }
+
+  .border-usa-blue {
+    border-color: var(--gradient-gold);
+  }
+
   .shadow-glow {
     box-shadow: var(--shadow-glow);
   }
 
   .shadow-card {
     box-shadow: var(--shadow-card);
+  }
+
+  .shadow-glow-red {
+    box-shadow: 0 0 60px hsl(0 90% 60% / 0.3);
+  }
+
+  .shadow-glow-white {
+    box-shadow: 0 0 40px hsl(0 0% 100% / 0.2);
+  }
+
+  .stars-bg {
+    background-image:
+      radial-gradient(2px 2px at 20px 30px, white, transparent),
+      radial-gradient(2px 2px at 60px 70px, white, transparent),
+      radial-gradient(1px 1px at 50px 50px, white, transparent),
+      radial-gradient(1px 1px at 130px 80px, white, transparent),
+      radial-gradient(2px 2px at 90px 10px, white, transparent),
+      radial-gradient(1px 1px at 10px 90px, white, transparent),
+      radial-gradient(1px 1px at 150px 40px, white, transparent),
+      radial-gradient(2px 2px at 180px 120px, white, transparent),
+      radial-gradient(1px 1px at 40px 140px, white, transparent),
+      radial-gradient(1px 1px at 110px 160px, white, transparent);
+    background-size: 200px 200px;
+    background-repeat: repeat;
+    animation: twinkle 4s ease-in-out infinite;
   }
 
   .animate-fade-up {
@@ -162,6 +235,15 @@
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
   }
 }
 

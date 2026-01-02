@@ -1,16 +1,18 @@
-import { Mail, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, Github, Linkedin, Download } from "lucide-react";
 import { Button } from "./ui/button";
 
 const socialLinks = [
-  { icon: Github, href: "#", label: "GitHub" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Twitter, href: "#", label: "Twitter" },
+  { icon: Github, href: "https://github.com/yogasundaram95", label: "GitHub" },
+  { icon: Linkedin, href: "https://linkedin.com/in/yogasundaram", label: "LinkedIn" },
 ];
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 lg:py-32 relative">
-      <div className="container mx-auto px-6 lg:px-12">
+    <section id="contact" className="py-24 lg:py-32 relative overflow-hidden">
+      {/* Stars background */}
+      <div className="absolute inset-0 stars-bg opacity-30" />
+
+      <div className="container mx-auto px-6 lg:px-12 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           {/* Section header */}
           <span className="text-primary font-display text-sm tracking-widest uppercase mb-4 block">
@@ -20,17 +22,35 @@ const Contact = () => {
             Let's work <span className="text-gradient">together</span>
           </h2>
           <p className="text-muted-foreground text-lg mb-10 max-w-xl mx-auto">
-            Have a project in mind or just want to say hello? I'm always open to discussing 
-            new opportunities and creative ideas.
+            Interested in discussing data science projects, analytics solutions, or career opportunities?
+            I'm always open to connecting with fellow data professionals and exploring new challenges.
           </p>
 
-          {/* Email CTA */}
-          <Button variant="hero" size="xl" asChild className="mb-12">
-            <a href="mailto:hello@example.com">
-              <Mail className="w-5 h-5" />
-              hello@example.com
-            </a>
-          </Button>
+          {/* CTA Buttons */}
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <Button variant="red" size="xl" asChild>
+              <a href="mailto:yogasundaram95@gmail.com">
+                <Mail className="w-5 h-5" />
+                yogasundaram95@gmail.com
+              </a>
+            </Button>
+            <Button variant="glow" size="xl" asChild>
+              <a href="https://linkedin.com/in/yogasundaram" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                <Linkedin className="w-5 h-5" />
+                Connect on LinkedIn
+              </a>
+            </Button>
+          </div>
+
+          {/* Download Resume */}
+          <div className="mb-12">
+            <Button variant="outline" size="lg" asChild>
+              <a href="/resume.pdf" download="Yoga_Sundaram_Resume.pdf" className="flex items-center gap-2">
+                <Download className="w-5 h-5" />
+                Download Resume
+              </a>
+            </Button>
+          </div>
 
           {/* Social links */}
           <div className="flex justify-center gap-4">

@@ -1,14 +1,26 @@
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
+
 const About = () => {
+  const { ref, isVisible } = useScrollAnimation();
+
   const stats = [
     { value: "5+", label: "Years Experience" },
-    { value: "50+", label: "Projects Completed" },
-    { value: "30+", label: "Happy Clients" },
+    { value: "99%+", label: "Data Accuracy" },
+    { value: "3.94", label: "GPA" },
   ];
 
   return (
-    <section id="about" className="py-24 lg:py-32 relative">
-      <div className="container mx-auto px-6 lg:px-12">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+    <section id="about" className="py-24 lg:py-32 relative overflow-hidden">
+      {/* Stars background */}
+      <div className="absolute inset-0 stars-bg opacity-30" />
+
+      <div className="container mx-auto px-6 lg:px-12 relative z-10">
+        <div
+          ref={ref}
+          className={`grid lg:grid-cols-2 gap-16 items-center transition-all duration-1000 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+          }`}
+        >
           {/* Left side - Image/Visual */}
           <div className="relative">
             <div className="aspect-square rounded-2xl bg-gradient-card border border-border overflow-hidden shadow-card">
@@ -23,7 +35,7 @@ const About = () => {
               </div>
             </div>
             {/* Decorative element */}
-            <div className="absolute -bottom-6 -right-6 w-24 h-24 border-2 border-primary/30 rounded-2xl" />
+            <div className="absolute -bottom-6 -right-6 w-24 h-24 border-2 border-usa-red rounded-2xl shadow-glow-red" />
           </div>
 
           {/* Right side - Content */}
@@ -32,20 +44,22 @@ const About = () => {
               About Me
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Turning ideas into
+              Transforming data into
               <br />
-              <span className="text-gradient">digital reality</span>
+              <span className="text-gradient">actionable insights</span>
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                I'm a passionate developer and designer with a keen eye for detail and a love for 
-                creating seamless user experiences. My journey in tech started over 5 years ago, 
-                and I've been hooked ever since.
+                Data Scientist with 5+ years of experience transforming complex customer, CRM, and behavioral
+                data into clear, actionable insights. Specialize in developing and deploying predictive models
+                and advanced analytics (e.g., churn, propensity, and marketing mix/forecasting) to drive campaign
+                performance and optimize KPIs, using SQL, Python, and R.
               </p>
               <p>
-                I specialize in building modern web applications using cutting-edge technologies. 
-                When I'm not coding, you'll find me exploring new design trends, contributing to 
-                open-source projects, or sharing knowledge with the community.
+                Skilled in building executive-level dashboards and automated data workflows in Power BI and
+                Tableau to communicate model-driven recommendations to business stakeholders. Hold a Master's
+                in Information Systems (3.94 GPA) from Cleveland State University and multiple certifications
+                in data analytics and cloud platforms.
               </p>
             </div>
 
