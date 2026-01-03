@@ -46,8 +46,8 @@
     --shadow-glow: 0 0 60px hsl(215 100% 55% / 0.2);
     --shadow-card: 0 20px 40px hsl(0 0% 0% / 0.3);
     
-    --font-display: 'Syne', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'Space Grotesk', sans-serif;
 
     --sidebar-background: 220 18% 10%;
     --sidebar-foreground: 45 20% 95%;

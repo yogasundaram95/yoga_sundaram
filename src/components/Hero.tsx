@@ -1,4 +1,4 @@
-import { ArrowDown, Download } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import { Button } from "./ui/button";
 
 const Hero = () => {
@@ -38,7 +38,7 @@ const Hero = () => {
             >
               <span style={{ color: 'hsl(210, 40%, 90%)' }}>Yoga Sundaram</span>
               <br />
-              <span className="text-gradient">Rama Swamy</span>
+              <span style={{ color: 'hsl(210, 40%, 90%)' }}>Rama Swamy</span>
             </h1>
 
             {/* Title */}
@@ -67,12 +67,6 @@ const Hero = () => {
               </Button>
               <Button variant="glow" size="lg" asChild>
                 <a href="#contact">Get In Touch</a>
-              </Button>
-              <Button variant="outline" size="lg" asChild>
-                <a href={`${import.meta.env.BASE_URL}resume.pdf`} download="Yoga_Sundaram_Resume.pdf" className="flex items-center gap-2">
-                  <Download className="w-5 h-5" />
-                  Download Resume
-                </a>
               </Button>
             </div>
           </div>
