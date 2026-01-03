@@ -33,7 +33,7 @@ const Hero = () => {
 
             {/* Name */}
             <h1
-              className="font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-up opacity-0"
+              className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-up opacity-0"
               style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
             >
               <span className="text-gradient">Yoga Sundaram</span>

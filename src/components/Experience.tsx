@@ -83,7 +83,7 @@ const Experience = () => {
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-3">
                         {exp.logo ? (
-                          <div className="w-12 h-12 rounded-xl bg-white/10 p-2 flex items-center justify-center overflow-hidden">
+                          <div className="w-14 h-14 rounded-xl bg-white p-1.5 flex items-center justify-center overflow-hidden">
                             <img
                               src={`${import.meta.env.BASE_URL}${exp.logo}`}
                               alt={`${exp.company} logo`}

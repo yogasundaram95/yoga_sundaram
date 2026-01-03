@@ -109,7 +109,7 @@
 
 @layer utilities {
   .text-gradient {
-    color: hsl(0 0% 100%) !important;
+    color: hsl(210 100% 85%) !important;
   }
 
   .text-usa-red {
