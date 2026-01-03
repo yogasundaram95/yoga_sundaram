@@ -4,6 +4,7 @@ import { useScrollAnimation } from "../hooks/useScrollAnimation";
 const experiences = [
   {
     company: "Bendix Commercial Vehicle Systems",
+    logo: "bendix-logo.png",
     role: "Sales Operations Data Analyst & Business Intelligence Co-op",
     location: "Avon, OH",
     period: "Jan 2025 – Present",
@@ -16,6 +17,7 @@ const experiences = [
   },
   {
     company: "Amazon Development Centre",
+    logo: "amazon-logo.png",
     role: "Machine Learning Data Analyst",
     location: "Chennai, TN",
     period: "Oct 2020 – Mar 2023",
@@ -28,6 +30,7 @@ const experiences = [
   },
   {
     company: "Gharib Shipping Services LLC",
+    logo: "gharib-logo.png",
     role: "Data Analyst",
     location: "Chennai, TN",
     period: "Jul 2017 – Oct 2019",
@@ -77,14 +80,24 @@ const Experience = () => {
                 {/* Content card */}
                 <div className="pb-8">
                   <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
-                    <div>
-                      <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-2 group-hover:text-gradient transition-all">
+                    <div className="flex-1">
+                      <div className="flex items-center gap-3 mb-3">
+                        {exp.logo ? (
+                          <div className="w-12 h-12 rounded-xl bg-white/10 p-2 flex items-center justify-center overflow-hidden">
+                            <img
+                              src={`${import.meta.env.BASE_URL}${exp.logo}`}
+                              alt={`${exp.company} logo`}
+                              className="w-full h-full object-contain"
+                            />
+                          </div>
+                        ) : (
+                          <Briefcase className="w-5 h-5 text-usa-white" />
+                        )}
+                        <span className="font-display text-xl md:text-2xl font-bold text-usa-white">{exp.company}</span>
+                      </div>
+                      <h3 className="font-display text-lg md:text-xl font-semibold text-foreground group-hover:text-primary transition-all">
                         {exp.role}
                       </h3>
-                      <div className="flex items-center gap-2 text-primary font-semibold mb-2">
-                        <Briefcase className="w-4 h-4" />
-                        <span>{exp.company}</span>
-                      </div>
                     </div>
                   </div>
 

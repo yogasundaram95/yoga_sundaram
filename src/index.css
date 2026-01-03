@@ -47,7 +47,7 @@
     --shadow-card: 0 20px 40px hsl(0 0% 0% / 0.3);
     
     --font-display: 'Space Grotesk', sans-serif;
-    --font-body: 'Roboto', sans-serif;
+    --font-body: 'Inter', sans-serif;
 
     --sidebar-background: 220 18% 10%;
     --sidebar-foreground: 45 20% 95%;
@@ -109,8 +109,7 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent;
-    background-image: var(--gradient-gold);
+    color: hsl(0 0% 100%) !important;
   }
 
   .text-usa-red {
@@ -249,7 +248,16 @@
 
 /* Smooth scrolling */
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
+  scroll-padding-top: 2rem;
+}
+
+body {
+  scroll-behavior: smooth !important;
+}
+
+* {
+  scroll-behavior: smooth !important;
 }
 
 /* Custom scrollbar */
