@@ -36,9 +36,9 @@ const Hero = () => {
               className="font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-up opacity-0"
               style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
             >
-              <span style={{ color: 'hsl(210, 40%, 90%)' }}>Yoga Sundaram</span>
+              <span className="text-gradient">Yoga Sundaram</span>
               <br />
-              <span style={{ color: 'hsl(210, 40%, 90%)' }}>Rama Swamy</span>
+              <span className="text-gradient">Rama Swamy</span>
             </h1>
 
             {/* Title */}
