@@ -4,6 +4,14 @@ import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
 const projects = [
   {
+    title: "Digital Divide Analysis: US Broadband Access Disparities",
+    description: "Led comprehensive geospatial study analyzing broadband inequalities across 3,141 U.S. counties by integrating 6 heterogeneous data sources (FCC deployment, CDC vulnerability metrics, Ookla speed tests, USDA classifications). Deployed advanced ML models (Random Forest, XGBoost) and spatial analysis techniques to uncover critical disparity: remote rural areas 6x more likely to lack basic broadband and average 52 Mbps vs. 110 Mbps in metros. Delivered interactive R Markdown dashboards with choropleth maps and statistical visualizations to support evidence-based policy recommendations.",
+    tags: ["R", "Spatial Analysis", "Random Forest", "XGBoost", "ggplot2", "R Markdown"],
+    image: "DD",
+    liveUrl: "https://yogasundaram95.github.io/digital-divide-analysis/",
+    githubUrl: "https://github.com/yogasundaram95/digital-divide-analysis",
+  },
+  {
     title: "Time-Series Stock Prediction Using Ensemble ML Model",
     description: "Led independent research integrating 5+ heterogeneous data sources (financial markets, macroeconomic indicators, sentiment analysis). Designed experimental framework with ensemble ML methods achieving 94% directional accuracy (R² = 0.88) through systematic feature engineering and SHAP analysis.",
     tags: ["Python", "XGBoost", "LSTM", "ARIMA", "Scikit-learn"],
