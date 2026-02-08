@@ -7,7 +7,7 @@ const projects = [
     title: "Digital Divide Analysis: US Broadband Access Disparities",
     description: "Led comprehensive geospatial study analyzing broadband inequalities across 3,141 U.S. counties by integrating 6 heterogeneous data sources (FCC deployment, CDC vulnerability metrics, Ookla speed tests, USDA classifications). Deployed advanced ML models (Random Forest, XGBoost) and spatial analysis techniques to uncover critical disparity: remote rural areas 6x more likely to lack basic broadband and average 52 Mbps vs. 110 Mbps in metros. Delivered interactive R Markdown dashboards with choropleth maps and statistical visualizations to support evidence-based policy recommendations.",
     tags: ["R", "Spatial Analysis", "Random Forest", "XGBoost", "ggplot2", "R Markdown"],
-    image: "DD",
+    image: "/thumbnails/digital-divide.svg",
     liveUrl: "https://yogasundaram95.github.io/digital-divide-analysis/",
     githubUrl: "https://github.com/yogasundaram95/digital-divide-analysis",
   },
@@ -15,7 +15,7 @@ const projects = [
     title: "Time-Series Stock Prediction Using Ensemble ML Model",
     description: "Led independent research integrating 5+ heterogeneous data sources (financial markets, macroeconomic indicators, sentiment analysis). Designed experimental framework with ensemble ML methods achieving 94% directional accuracy (R² = 0.88) through systematic feature engineering and SHAP analysis.",
     tags: ["Python", "XGBoost", "LSTM", "ARIMA", "Scikit-learn"],
-    image: "ML",
+    image: "/thumbnails/stock-prediction.svg",
     liveUrl: "#",
     githubUrl: "#",
   },
@@ -23,7 +23,7 @@ const projects = [
     title: "Statistical Modeling for Credit Risk Classification",
     description: "Designed and executed comparative study of classification algorithms (Decision Tree, Neural Networks) for credit risk assessment. Achieved 80-100% accuracy on held-out test set with AUC = 0.814 through rigorous model validation using 10-fold cross-validation and ROC analysis.",
     tags: ["Weka", "R", "SQL", "Neural Networks"],
-    image: "CR",
+    image: "/thumbnails/credit-risk.svg",
     liveUrl: "#",
     githubUrl: "#",
   },
@@ -31,7 +31,7 @@ const projects = [
     title: "Executive-Level Power BI Dashboards & ETL Automation",
     description: "Built executive-level Power BI dashboards with standardized KPI definitions ensuring 99%+ data accuracy. Reduced recurring report preparation time from 6 hours to 25 minutes by automating SQL and Power Query transformations. Orchestrated end-to-end ETL pipelines for 100K+ records.",
     tags: ["Power BI", "DAX", "SQL", "SAP HANA", "ETL"],
-    image: "BI",
+    image: "/thumbnails/powerbi-dashboard.svg",
     liveUrl: "#",
     githubUrl: "#",
   },
@@ -39,7 +39,7 @@ const projects = [
     title: "State of the Union Web Scraper",
     description: "Built a Python web scraper that systematically collects presidential State of the Union addresses dating back to 1790, storing them in SQL Server and local text files. Features production-ready error handling, structured logging, SQL injection prevention via identifier validation, and duplicate detection with UNIQUE constraints. Includes a standalone demo script that scrapes speeches without requiring a database.",
     tags: ["Python", "SQL Server", "Web Scraping", "lxml", "XPath", "pyodbc"],
-    image: "WS",
+    image: "/thumbnails/sotu-scraper.svg",
     liveUrl: "#",
     githubUrl: "https://github.com/yogasundaram95/State-of-the-Union-Web-Scraper",
   },
@@ -80,12 +80,11 @@ const Projects = () => {
               <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
                 <div className="relative group">
                   <div className="aspect-video rounded-2xl bg-gradient-card border border-border overflow-hidden shadow-card transition-all duration-500 group-hover:shadow-glow group-hover:border-primary/30 group-hover:-translate-y-2 group-hover:scale-[1.02]">
-                    <div className="absolute inset-0 bg-primary/5" />
-                    <div className="relative h-full flex items-center justify-center">
-                      <span className="font-display text-7xl md:text-8xl font-bold text-gradient opacity-30 group-hover:opacity-50 transition-opacity">
-                        {project.image}
-                      </span>
-                    </div>
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   {/* Decorative elements */}
                   <div className="absolute -z-10 -bottom-4 -right-4 w-full h-full rounded-2xl border border-primary/20" />
