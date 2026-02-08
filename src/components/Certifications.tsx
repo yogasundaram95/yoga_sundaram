@@ -1,4 +1,4 @@
-import { Award, CheckCircle2 } from "lucide-react";
+import { Award, CheckCircle2, ExternalLink } from "lucide-react";
 
 const certifications = [
   {
@@ -8,16 +8,17 @@ const certifications = [
     status: "Completed",
   },
   {
+    name: "Microsoft Certified: Fabric Data Engineer Associate",
+    issuer: "Microsoft",
+    date: "Dec 2025",
+    status: "Completed",
+    credentialUrl: "https://learn.microsoft.com/en-us/users/ramaswamyyogasundaram-5466/credentials/certification/fabric-data-engineer-associate?tab=credentials-tab",
+  },
+  {
     name: "CISA (Certified Information Systems Auditor)",
     issuer: "ISACA",
     date: "Expected Jan 2026",
     status: "In Progress",
-  },
-  {
-    name: "Microsoft Certified: Fabric Data Engineer Associate",
-    issuer: "Microsoft",
-    date: "Dec 2025",
-    status: "Expected",
   },
   {
     name: "Oracle Cloud Data Management Certified Foundations Associate",
@@ -62,7 +63,7 @@ const Certifications = () => {
                     {cert.name}
                   </h3>
                   <p className="text-muted-foreground text-sm mb-3">{cert.issuer}</p>
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between flex-wrap gap-2">
                     <span className="text-sm text-muted-foreground">{cert.date}</span>
                     <div className="flex items-center gap-2">
                       {cert.status === "Completed" && (
@@ -83,6 +84,17 @@ const Certifications = () => {
                       )}
                     </div>
                   </div>
+                  {"credentialUrl" in cert && cert.credentialUrl && (
+                    <a
+                      href={cert.credentialUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-xs text-primary hover:underline mt-2"
+                    >
+                      <ExternalLink className="w-3 h-3" />
+                      Verify Credential
+                    </a>
+                  )}
                 </div>
               </div>
             </div>

@@ -35,6 +35,14 @@ const projects = [
     liveUrl: "#",
     githubUrl: "#",
   },
+  {
+    title: "State of the Union Web Scraper",
+    description: "Built a Python web scraper that systematically collects presidential State of the Union addresses dating back to 1790, storing them in SQL Server and local text files. Features production-ready error handling, structured logging, SQL injection prevention via identifier validation, and duplicate detection with UNIQUE constraints. Includes a standalone demo script that scrapes speeches without requiring a database.",
+    tags: ["Python", "SQL Server", "Web Scraping", "lxml", "XPath", "pyodbc"],
+    image: "WS",
+    liveUrl: "#",
+    githubUrl: "https://github.com/yogasundaram95/State-of-the-Union-Web-Scraper",
+  },
 ];
 
 const Projects = () => {
@@ -66,9 +74,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div 
               key={index}
-              className={`grid lg:grid-cols-2 gap-8 lg:gap-16 items-center ${
-                index % 2 === 1 ? 'lg:flex-row-reverse' : ''
-              }`}
+              className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center"
             >
               {/* Project image */}
               <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
@@ -117,12 +123,14 @@ const Projects = () => {
                       </a>
                     </Button>
                   )}
-                  <Button variant="glow" size="default" asChild>
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      <Github className="w-4 h-4" />
-                      View on GitHub
-                    </a>
-                  </Button>
+                  {project.githubUrl && project.githubUrl !== "#" && (
+                    <Button variant="glow" size="default" asChild>
+                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                        <Github className="w-4 h-4" />
+                        View on GitHub
+                      </a>
+                    </Button>
+                  )}
                 </div>
               </div>
             </div>
