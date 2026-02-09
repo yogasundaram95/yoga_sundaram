@@ -5,7 +5,7 @@ export const testimonials = [
     company: "Bendix Commercial Vehicle Systems",
     relationship: "Project Lead at Bendix",
     content: "Yoga consistently brought professionalism, curiosity, and a can-do attitude to every interaction. He played a pivotal role in our digital asset management initiative involving 500,000 eCommerce product images, managing extraction, transfer, and reload workflows end-to-end. Beyond the work, Yoga is a culture builder and an easy collaborator.",
-    image: "MG",
+    photo: "michael-grandstaff.jpeg",
   },
   {
     name: "Vivek Aravind",
@@ -13,7 +13,7 @@ export const testimonials = [
     company: "Walmart (Ex-Amazon)",
     relationship: "Former Manager at Amazon",
     content: "Yoga is very dedicated towards his work and has wide knowledge over the domain he handles along with analytic skills which helps in driving business process improvement. He is a go-to person whenever in need.",
-    image: "VA",
+    photo: "vivek-aravind.jpeg",
   },
   {
     name: "Ponraj",
@@ -21,6 +21,6 @@ export const testimonials = [
     company: "Amazon Development Centre",
     relationship: "Colleague at Amazon",
     content: "I had the pleasure of working with Yoga for two years. During that time, he proved to be a highly skilled and experienced analytics professional with a deep understanding of the industry. He is also a highly motivated and results-oriented individual with a strong work ethic.",
-    image: "P",
+    photo: "ponraj.jpeg",
   },
 ];

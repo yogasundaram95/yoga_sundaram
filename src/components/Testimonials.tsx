@@ -40,10 +40,15 @@ const Testimonials = () => {
 
               {/* Avatar */}
               <div className="mb-6">
-                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-all">
-                  <span className="font-display text-xl font-bold text-primary">
-                    {testimonial.image}
-                  </span>
+                <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-primary/30 group-hover:border-primary/60 transition-all">
+                  <img
+                    src={`${import.meta.env.BASE_URL}${testimonial.photo}`}
+                    alt={testimonial.name}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    width={64}
+                    height={64}
+                  />
                 </div>
               </div>
 

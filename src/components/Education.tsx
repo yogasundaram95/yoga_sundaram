@@ -54,8 +54,17 @@ const Education = () => {
                   <div className="flex flex-col md:flex-row items-start gap-6 md:gap-8 relative z-10">
                     {/* Icon */}
                     <div className="flex-shrink-0">
-                      <div className="w-20 h-20 rounded-3xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-500 shadow-lg">
-                        {edu.gpa ? (
+                      <div className="w-20 h-20 rounded-3xl bg-white p-2 flex items-center justify-center group-hover:scale-110 transition-all duration-500 shadow-lg overflow-hidden">
+                        {"logo" in edu && edu.logo ? (
+                          <img
+                            src={`${import.meta.env.BASE_URL}${edu.logo}`}
+                            alt={`${edu.school} logo`}
+                            className="w-full h-full object-contain"
+                            loading="lazy"
+                            width={64}
+                            height={64}
+                          />
+                        ) : edu.gpa ? (
                           <Award className="w-10 h-10 text-primary" />
                         ) : (
                           <GraduationCap className="w-10 h-10 text-primary" />

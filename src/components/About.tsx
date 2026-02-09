@@ -5,7 +5,6 @@ const About = () => {
 
   const stats = [
     { value: "5+", label: "Years Experience" },
-    { value: "99%+", label: "Data Accuracy" },
     { value: "3.94", label: "GPA" },
   ];
 
@@ -50,23 +49,15 @@ const About = () => {
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Data Scientist with 5+ years of experience transforming complex customer, CRM, and behavioral
-                data into clear, actionable insights. Specialize in developing and deploying predictive models
-                and advanced analytics (e.g., churn, propensity, and marketing mix/forecasting) to drive campaign
-                performance and optimize KPIs, using SQL, Python, and R.
+                Data Scientist with 5+ years of experience building predictive models, ETL pipelines, and executive dashboards using SQL, Python, Power BI, and cloud platforms. MS in Information Systems from Cleveland State University.
               </p>
               <p>
-                Skilled in building executive-level dashboards and automated data workflows in Power BI and
-                Tableau to communicate model-driven recommendations to business stakeholders. Hold a Master's
-                in Information Systems (3.94 GPA) from Cleveland State University and multiple certifications
-                in data analytics and cloud platforms. Currently seeking Analytics Engineer roles where I can
-                combine my data science expertise with modern data stack engineering to build scalable,
-                production-grade analytics solutions.
+                Currently seeking Analytics Engineer roles to build scalable, production-grade analytics solutions.
               </p>
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 mt-10 pt-10 border-t border-border">
+            <div className="grid grid-cols-2 gap-6 mt-10 pt-10 border-t border-border">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center lg:text-left">
                   <div className="font-display text-3xl md:text-4xl font-bold text-gradient">

@@ -2,6 +2,7 @@ export const education = [
   {
     degree: "Master of Information Systems",
     school: "Cleveland State University",
+    logo: "csu-logo.png",
     location: "Cleveland, OH",
     period: "Aug 2023 – Dec 2025",
     gpa: "3.94/4.00",
@@ -28,6 +29,7 @@ export const education = [
   {
     degree: "Bachelor of Technology in Aeronautical Engineering",
     school: "BSA Crescent Institute of Science and Technology",
+    logo: "crescent-logo.png",
     location: "Chennai, India",
     period: "Jun 2013 – Jun 2017",
     highlights: [
