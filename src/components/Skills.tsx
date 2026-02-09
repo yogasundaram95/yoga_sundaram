@@ -1,25 +1,11 @@
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
-
-const skillCategories = [
-  {
-    title: "Analytics & BI",
-    skills: ["Power BI", "Tableau", "QuickSight", "DAX", "KPI Dashboards"],
-  },
-  {
-    title: "Programming & Data",
-    skills: ["SQL", "Python", "R", "Pandas", "Scikit-learn"],
-  },
-  {
-    title: "Data Platforms & ML",
-    skills: ["AWS Redshift", "SAP HANA", "ETL Pipelines", "XGBoost", "LSTM"],
-  },
-];
+import { skillCategories } from "../data/skills";
 
 const Skills = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="skills" className="py-24 lg:py-32 relative overflow-hidden bg-gradient-card">
+    <section id="skills" aria-label="Skills and Technologies" className="py-24 lg:py-32 relative overflow-hidden bg-gradient-card">
       {/* Stars background */}
       <div className="absolute inset-0 stars-bg opacity-30" />
 
@@ -42,7 +28,7 @@ const Skills = () => {
         {/* Skills grid */}
         <div className="grid md:grid-cols-3 gap-8">
           {skillCategories.map((category, index) => (
-            <div 
+            <div
               key={index}
               className="p-8 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-glow group"
             >

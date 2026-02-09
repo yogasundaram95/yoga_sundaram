@@ -22,7 +22,7 @@
     --secondary-foreground: 220 30% 12%;
 
     --muted: 220 20% 22%;
-    --muted-foreground: 0 0% 85%;
+    --muted-foreground: 0 0% 90%;
 
     --accent: 0 90% 60%;
     --accent-foreground: 0 0% 100%;
@@ -276,4 +276,13 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(var(--primary));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

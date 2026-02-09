@@ -1,36 +1,9 @@
 import { Award, CheckCircle2, ExternalLink } from "lucide-react";
-
-const certifications = [
-  {
-    name: "Google Data Analytics Professional Certificate",
-    issuer: "Google",
-    date: "Oct 2024",
-    status: "Completed",
-  },
-  {
-    name: "Microsoft Certified: Fabric Data Engineer Associate",
-    issuer: "Microsoft",
-    date: "Dec 2025",
-    status: "Completed",
-    credentialUrl: "https://learn.microsoft.com/en-us/users/ramaswamyyogasundaram-5466/credentials/certification/fabric-data-engineer-associate?tab=credentials-tab",
-  },
-  {
-    name: "CISA (Certified Information Systems Auditor)",
-    issuer: "ISACA",
-    date: "Expected Jan 2026",
-    status: "In Progress",
-  },
-  {
-    name: "Oracle Cloud Data Management Certified Foundations Associate",
-    issuer: "Oracle",
-    date: "Nov 2023",
-    status: "Completed",
-  },
-];
+import { certifications } from "../data/certifications";
 
 const Certifications = () => {
   return (
-    <section id="certifications" className="py-24 lg:py-32 relative overflow-hidden bg-gradient-card">
+    <section id="certifications" aria-label="Certifications and Credentials" className="py-24 lg:py-32 relative overflow-hidden bg-gradient-card">
       {/* Stars background */}
       <div className="absolute inset-0 stars-bg opacity-30" />
 
@@ -75,11 +48,6 @@ const Certifications = () => {
                       {cert.status === "In Progress" && (
                         <span className="text-xs bg-primary/20 text-primary px-2 py-1 rounded-full font-semibold">
                           In Progress
-                        </span>
-                      )}
-                      {cert.status === "Expected" && (
-                        <span className="text-xs bg-secondary text-secondary-foreground px-2 py-1 rounded-full font-semibold">
-                          Expected
                         </span>
                       )}
                     </div>

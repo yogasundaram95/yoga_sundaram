@@ -10,7 +10,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-24 lg:py-32 relative overflow-hidden">
+    <section id="about" aria-label="About Me" className="py-24 lg:py-32 relative overflow-hidden">
       {/* Stars background */}
       <div className="absolute inset-0 stars-bg opacity-30" />
 

@@ -13,13 +13,25 @@ const Certifications = lazy(() => import("@/components/Certifications"));
 const Contact = lazy(() => import("@/components/Contact"));
 const Footer = lazy(() => import("@/components/Footer"));
 
+const LoadingSpinner = () => (
+  <div className="flex items-center justify-center py-24">
+    <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin" />
+  </div>
+);
+
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-md focus:outline-none"
+      >
+        Skip to content
+      </a>
       <Navigation />
-      <main>
+      <main id="main-content">
         <Hero />
-        <Suspense fallback={null}>
+        <Suspense fallback={<LoadingSpinner />}>
           <About />
           <Experience />
           <Projects />

@@ -8,7 +8,7 @@ const socialLinks = [
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 lg:py-32 relative overflow-hidden">
+    <section id="contact" aria-label="Contact" className="py-24 lg:py-32 relative overflow-hidden">
       {/* Stars background */}
       <div className="absolute inset-0 stars-bg opacity-30" />
 

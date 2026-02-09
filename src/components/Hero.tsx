@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex flex-col justify-center relative overflow-hidden">
+    <section aria-label="Hero" className="min-h-screen flex flex-col justify-center relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 bg-gradient-dark" />
 
@@ -46,7 +46,7 @@ const Hero = () => {
               className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-8 animate-fade-up opacity-0"
               style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}
             >
-              Data Scientist | Data Analyst
+              Data Scientist | Analytics Engineer
             </p>
 
             {/* Description */}
@@ -54,7 +54,7 @@ const Hero = () => {
               className="text-muted-foreground max-w-xl text-base md:text-lg leading-relaxed mb-10 animate-fade-up opacity-0"
               style={{ animationDelay: "0.8s", animationFillMode: "forwards" }}
             >
-              Data Scientist and Data Analyst with 5+ years of experience analyzing customer, CRM, and behavioral data to drive campaign performance and KPI outcomes. Strong background in SQL, Python, Power BI, and Tableau, delivering clear, data-backed insights that support business and senior leadership decisions.
+              Data Scientist and Analytics Engineer with 5+ years of experience building predictive models, automated ETL pipelines, and executive dashboards that drive campaign performance and KPI outcomes. Strong background in SQL, Python, Power BI, and cloud data platforms, delivering scalable, data-backed solutions for business and senior leadership decisions.
             </p>
 
             {/* CTA Buttons */}
@@ -86,6 +86,8 @@ const Hero = () => {
                   src={`${import.meta.env.BASE_URL}profile.jpg`}
                   alt="Yoga Sundaram Rama Swamy - Data Scientist"
                   className="w-full h-full object-cover object-top"
+                  width={380}
+                  height={380}
                   style={{ objectPosition: 'center 10%' }}
                 />
               </div>

@@ -1,51 +1,12 @@
 import { GraduationCap, Calendar, Award } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-
-const education = [
-  {
-    degree: "Master of Information Systems",
-    school: "Cleveland State University",
-    location: "Cleveland, OH",
-    period: "Aug 2023 – Dec 2025",
-    gpa: "3.94/4.00",
-    categories: {
-      "Business Intelligence": [
-        "Business Intelligence Systems",
-        "Data Visualization: Theory & Practice",
-        "Modern Database Design/Implementation",
-        "Enterprise Databases",
-        "Enterprise Resource Planning",
-      ],
-      "Data Science & Analytics": [
-        "Machine Learning",
-        "Systems Thinking & Modeling",
-        "Emerging Technologies in IS",
-        "Managing Network/Security Risk",
-      ],
-      "Systems Analysis": [
-        "Systems Analysis Methods",
-        "Advanced Systems Analysis & Design",
-      ],
-    },
-  },
-  {
-    degree: "Bachelor of Technology in Aeronautical Engineering",
-    school: "BSA Crescent Institute of Science and Technology",
-    location: "Chennai, India",
-    period: "Jun 2013 – Jun 2017",
-    highlights: [
-      "Foundation in analytical and computational problem-solving",
-      "Strong mathematical and statistical background",
-      "Systems thinking and process optimization",
-    ],
-  },
-];
+import { education } from "../data/education";
 
 const Education = () => {
   const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation();
 
   return (
-    <section id="education" className="py-24 lg:py-32 relative overflow-hidden">
+    <section id="education" aria-label="Education" className="py-24 lg:py-32 relative overflow-hidden">
       {/* Stars background */}
       <div className="absolute inset-0 stars-bg opacity-30" />
 
@@ -128,7 +89,7 @@ const Education = () => {
                       </div>
 
                       {/* Coursework */}
-                      {edu.categories && (
+                      {"categories" in edu && edu.categories && (
                         <div className="space-y-5 pt-4 border-t border-border/50">
                           <p className="text-base font-display font-semibold text-foreground uppercase tracking-wide">
                             Relevant Coursework
@@ -155,7 +116,7 @@ const Education = () => {
                       )}
 
                       {/* Highlights */}
-                      {edu.highlights && (
+                      {"highlights" in edu && edu.highlights && (
                         <div className="space-y-4 pt-4 border-t border-border/50">
                           <p className="text-base font-display font-semibold text-foreground uppercase tracking-wide">
                             Key Focus Areas

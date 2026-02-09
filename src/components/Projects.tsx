@@ -1,55 +1,13 @@
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "./ui/button";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
-
-const projects = [
-  {
-    title: "Digital Divide Analysis: US Broadband Access Disparities",
-    description: "Led comprehensive geospatial study analyzing broadband inequalities across 3,141 U.S. counties by integrating 6 heterogeneous data sources (FCC deployment, CDC vulnerability metrics, Ookla speed tests, USDA classifications). Deployed advanced ML models (Random Forest, XGBoost) and spatial analysis techniques to uncover critical disparity: remote rural areas 6x more likely to lack basic broadband and average 52 Mbps vs. 110 Mbps in metros. Delivered interactive R Markdown dashboards with choropleth maps and statistical visualizations to support evidence-based policy recommendations.",
-    tags: ["R", "Spatial Analysis", "Random Forest", "XGBoost", "ggplot2", "R Markdown"],
-    image: "thumbnails/digital-divide.svg",
-    liveUrl: "https://yogasundaram95.github.io/digital-divide-analysis/",
-    githubUrl: "https://github.com/yogasundaram95/digital-divide-analysis",
-  },
-  {
-    title: "Time-Series Stock Prediction Using Ensemble ML Model",
-    description: "Led independent research integrating 5+ heterogeneous data sources (financial markets, macroeconomic indicators, sentiment analysis). Designed experimental framework with ensemble ML methods achieving 94% directional accuracy (R² = 0.88) through systematic feature engineering and SHAP analysis.",
-    tags: ["Python", "XGBoost", "LSTM", "ARIMA", "Scikit-learn"],
-    image: "thumbnails/stock-prediction.svg",
-    liveUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    title: "Statistical Modeling for Credit Risk Classification",
-    description: "Designed and executed comparative study of classification algorithms (Decision Tree, Neural Networks) for credit risk assessment. Achieved 80-100% accuracy on held-out test set with AUC = 0.814 through rigorous model validation using 10-fold cross-validation and ROC analysis.",
-    tags: ["Weka", "R", "SQL", "Neural Networks"],
-    image: "thumbnails/credit-risk.svg",
-    liveUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    title: "Executive-Level Power BI Dashboards & ETL Automation",
-    description: "Built executive-level Power BI dashboards with standardized KPI definitions ensuring 99%+ data accuracy. Reduced recurring report preparation time from 6 hours to 25 minutes by automating SQL and Power Query transformations. Orchestrated end-to-end ETL pipelines for 100K+ records.",
-    tags: ["Power BI", "DAX", "SQL", "SAP HANA", "ETL"],
-    image: "thumbnails/powerbi-dashboard.svg",
-    liveUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    title: "State of the Union Web Scraper",
-    description: "Built a Python web scraper that systematically collects presidential State of the Union addresses dating back to 1790, storing them in SQL Server and local text files. Features production-ready error handling, structured logging, SQL injection prevention via identifier validation, and duplicate detection with UNIQUE constraints. Includes a standalone demo script that scrapes speeches without requiring a database.",
-    tags: ["Python", "SQL Server", "Web Scraping", "lxml", "XPath", "pyodbc"],
-    image: "thumbnails/sotu-scraper.svg",
-    liveUrl: "#",
-    githubUrl: "https://github.com/yogasundaram95/State-of-the-Union-Web-Scraper",
-  },
-];
+import { projects } from "../data/projects";
 
 const Projects = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="projects" className="py-24 lg:py-32 relative overflow-hidden">
+    <section id="projects" aria-label="Featured Projects" className="py-24 lg:py-32 relative overflow-hidden">
       {/* Stars background */}
       <div className="absolute inset-0 stars-bg opacity-30" />
 
@@ -72,7 +30,7 @@ const Projects = () => {
         {/* Projects grid */}
         <div className="space-y-20">
           {projects.map((project, index) => (
-            <div 
+            <div
               key={index}
               className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center"
             >
@@ -84,6 +42,9 @@ const Projects = () => {
                       src={`${import.meta.env.BASE_URL}${project.image}`}
                       alt={project.title}
                       className="w-full h-full object-cover"
+                      loading="lazy"
+                      width={600}
+                      height={338}
                     />
                   </div>
                   {/* Decorative elements */}
@@ -99,7 +60,7 @@ const Projects = () => {
                 <p className="text-muted-foreground leading-relaxed mb-6">
                   {project.description}
                 </p>
-                
+
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-8">
                   {project.tags.map((tag, tagIndex) => (
