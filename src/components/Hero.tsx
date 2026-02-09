@@ -88,7 +88,7 @@ const Hero = () => {
                   className="w-full h-full object-cover object-top"
                   width={380}
                   height={380}
-                  style={{ objectPosition: 'center 10%' }}
+                  style={{ objectPosition: 'center 50%' }}
                 />
               </div>
 

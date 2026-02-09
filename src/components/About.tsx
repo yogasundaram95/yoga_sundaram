@@ -59,7 +59,9 @@ const About = () => {
                 Skilled in building executive-level dashboards and automated data workflows in Power BI and
                 Tableau to communicate model-driven recommendations to business stakeholders. Hold a Master's
                 in Information Systems (3.94 GPA) from Cleveland State University and multiple certifications
-                in data analytics and cloud platforms.
+                in data analytics and cloud platforms. Currently seeking Analytics Engineer roles where I can
+                combine my data science expertise with modern data stack engineering to build scalable,
+                production-grade analytics solutions.
               </p>
             </div>
 
