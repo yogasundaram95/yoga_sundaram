@@ -22,16 +22,16 @@ const Contact = () => {
             Let's work <span className="text-gradient">together</span>
           </h2>
           <p className="text-muted-foreground text-lg mb-10 max-w-xl mx-auto">
-            Interested in discussing data science projects, analytics solutions, or career opportunities?
-            I'm always open to connecting with fellow data professionals and exploring new challenges.
+            Interested in discussing GTM engineering, revenue operations, or analytics infrastructure?
+            I'm always open to connecting and exploring new opportunities.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Button variant="red" size="xl" asChild>
-              <a href="mailto:yogasundaram95@gmail.com">
+              <a href="mailto:yogasundaramramaswamy@gmail.com">
                 <Mail className="w-5 h-5" />
-                yogasundaram95@gmail.com
+                yogasundaramramaswamy@gmail.com
               </a>
             </Button>
             <Button variant="glow" size="xl" asChild>

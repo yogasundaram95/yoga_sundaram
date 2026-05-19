@@ -49,10 +49,10 @@ const About = () => {
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Data Scientist with 5+ years of experience building predictive models, ETL pipelines, and executive dashboards using SQL, Python, Power BI, and cloud platforms. MS in Information Systems from Cleveland State University.
+                GTM Engineer with 6+ years of experience building revenue systems, automation workflows, and analytics infrastructure across SaaS and enterprise environments. Experienced in outbound orchestration, lead enrichment, funnel analytics, and AI-powered workflows using Python, Snowflake, dbt, Salesforce, Clay, and modern GTM tooling.
               </p>
               <p>
-                Currently seeking Analytics Engineer roles to build scalable, production-grade analytics solutions.
+                Delivered systems that increased outbound conversion rates by 28%, improved free-to-paid conversion by 31%, and reduced manual operational effort by 45%. MS in Information Systems from Cleveland State University.
               </p>
             </div>
 

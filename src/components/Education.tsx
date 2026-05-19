@@ -97,6 +97,14 @@ const Education = () => {
                         <span className="font-medium">{edu.period}</span>
                       </div>
 
+                      {/* Scholarship */}
+                      {"scholarship" in edu && edu.scholarship && (
+                        <div className="flex items-center gap-2">
+                          <Award className="w-4 h-4 text-yellow-400 flex-shrink-0" />
+                          <span className="text-sm text-yellow-400 font-medium">{edu.scholarship as string}</span>
+                        </div>
+                      )}
+
                       {/* Coursework */}
                       {"categories" in edu && edu.categories && (
                         <div className="space-y-5 pt-4 border-t border-border/50">

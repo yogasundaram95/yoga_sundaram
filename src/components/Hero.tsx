@@ -46,7 +46,7 @@ const Hero = () => {
               className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-8 animate-fade-up opacity-0"
               style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}
             >
-              Data Scientist | Analytics Engineer
+              GTM Engineer
             </p>
 
             {/* Description */}
@@ -54,7 +54,7 @@ const Hero = () => {
               className="text-muted-foreground max-w-xl text-base md:text-lg leading-relaxed mb-10 animate-fade-up opacity-0"
               style={{ animationDelay: "0.8s", animationFillMode: "forwards" }}
             >
-              Data Scientist and Analytics Engineer with 5+ years of experience building predictive models, automated ETL pipelines, and executive dashboards that drive campaign performance and KPI outcomes. Strong background in SQL, Python, Power BI, and cloud data platforms, delivering scalable, data-backed solutions for business and senior leadership decisions.
+              GTM Engineer with 6+ years of experience building revenue systems, automation workflows, and analytics infrastructure across SaaS and enterprise environments. Experienced in outbound orchestration, lead enrichment, funnel analytics, and AI-powered workflows using Python, Snowflake, dbt, Salesforce, Clay, and modern GTM tooling. Microsoft Certified: DP-700 Fabric Data Engineer Associate.
             </p>
 
             {/* CTA Buttons */}
