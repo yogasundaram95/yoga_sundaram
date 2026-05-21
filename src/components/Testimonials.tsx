@@ -24,6 +24,17 @@ const Testimonials = () => {
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
             What People <span className="text-gradient">Say</span>
           </h2>
+          <p className="text-muted-foreground text-sm mt-4">
+            Sourced from LinkedIn recommendations —{" "}
+            <a
+              href="https://linkedin.com/in/yogasundaram"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+            >
+              view profile
+            </a>
+          </p>
         </div>
 
         {/* Testimonials grid */}

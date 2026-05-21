@@ -52,11 +52,31 @@ const Hero = () => {
 
             {/* Description */}
             <p
-              className="text-muted-foreground max-w-xl text-base md:text-lg leading-relaxed mb-10 animate-fade-up opacity-0"
+              className="text-muted-foreground max-w-xl text-base md:text-lg leading-relaxed mb-6 animate-fade-up opacity-0"
               style={{ animationDelay: "0.8s", animationFillMode: "forwards" }}
             >
               GTM Engineer building revenue systems, AI workflows, and analytics infrastructure across SaaS and enterprise teams — using Python, Snowflake, dbt, Salesforce, and Clay.
             </p>
+
+            {/* Stat chips */}
+            <div
+              className="flex flex-wrap gap-3 mb-10 animate-fade-up opacity-0"
+              style={{ animationDelay: "0.9s", animationFillMode: "forwards" }}
+            >
+              {[
+                { value: "28%", label: "↑ outbound conversion" },
+                { value: "31%", label: "↑ free-to-paid" },
+                { value: "45%", label: "↓ manual effort" },
+              ].map((stat) => (
+                <div
+                  key={stat.label}
+                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-sm"
+                >
+                  <span className="font-display font-bold text-primary">{stat.value}</span>
+                  <span className="text-muted-foreground">{stat.label}</span>
+                </div>
+              ))}
+            </div>
 
             {/* CTA Buttons */}
             <div

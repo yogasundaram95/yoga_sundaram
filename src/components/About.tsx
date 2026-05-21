@@ -3,11 +3,6 @@ import { useScrollAnimation } from "../hooks/useScrollAnimation";
 const About = () => {
   const { ref, isVisible } = useScrollAnimation();
 
-  const stats = [
-    { value: "6+", label: "Years Experience" },
-    { value: "3.94", label: "GPA" },
-  ];
-
   return (
     <section id="about" aria-label="About Me" className="py-24 lg:py-32 relative overflow-hidden">
       {/* Stars background */}
@@ -20,18 +15,27 @@ const About = () => {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
           }`}
         >
-          {/* Left side - Image/Visual */}
+          {/* Left side - Metric cards */}
           <div className="relative">
-            <div className="aspect-square rounded-2xl bg-gradient-card border border-border overflow-hidden shadow-card">
-              <div className="absolute inset-0 bg-primary/5" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-32 h-32 md:w-48 md:h-48 rounded-full bg-gradient-gold opacity-20 blur-2xl" />
-              </div>
-              <div className="relative h-full flex items-center justify-center p-8">
-                <span className="font-display text-8xl md:text-9xl font-bold text-gradient opacity-30">
-                  A
-                </span>
-              </div>
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { value: "28%", label: "Outbound conversion lift", color: "text-primary" },
+                { value: "31%", label: "Free-to-paid conversion", color: "text-primary" },
+                { value: "45%", label: "Reduction in manual ops effort", color: "text-usa-red" },
+                { value: "6+", label: "Years of GTM & data experience", color: "text-usa-red" },
+              ].map((metric) => (
+                <div
+                  key={metric.label}
+                  className="p-6 rounded-2xl bg-gradient-card border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-glow flex flex-col justify-between"
+                >
+                  <span className={`font-display text-4xl font-bold ${metric.color}`}>
+                    {metric.value}
+                  </span>
+                  <span className="text-sm text-muted-foreground mt-2 leading-snug">
+                    {metric.label}
+                  </span>
+                </div>
+              ))}
             </div>
             {/* Decorative element */}
             <div className="absolute -bottom-6 -right-6 w-24 h-24 border-2 border-usa-red rounded-2xl shadow-glow-red" />
@@ -43,9 +47,9 @@ const About = () => {
               About Me
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Transforming data into
+              Building revenue systems
               <br />
-              <span className="text-gradient">actionable insights</span>
+              <span className="text-gradient">that close the loop</span>
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
@@ -56,18 +60,12 @@ const About = () => {
               </p>
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-2 gap-6 mt-10 pt-10 border-t border-border">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center lg:text-left">
-                  <div className="font-display text-3xl md:text-4xl font-bold text-gradient">
-                    {stat.value}
-                  </div>
-                  <div className="text-sm text-muted-foreground mt-1">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
+            {/* Certification badge */}
+            <div className="mt-10 pt-10 border-t border-border">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-sm">
+                <span className="text-primary font-semibold">Microsoft Certified</span>
+                <span className="text-muted-foreground">DP-700 Fabric Data Engineer Associate</span>
+              </div>
             </div>
           </div>
         </div>
