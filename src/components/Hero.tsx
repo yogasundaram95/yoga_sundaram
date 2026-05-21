@@ -35,6 +35,7 @@ const Hero = () => {
             <h1
               className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-up opacity-0"
               style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
+              aria-label="Yoga Sundaram Rama Swamy"
             >
               <span className="text-gradient">Yoga Sundaram</span>
               <br />
@@ -54,7 +55,7 @@ const Hero = () => {
               className="text-muted-foreground max-w-xl text-base md:text-lg leading-relaxed mb-10 animate-fade-up opacity-0"
               style={{ animationDelay: "0.8s", animationFillMode: "forwards" }}
             >
-              GTM Engineer with 6+ years of experience building revenue systems, automation workflows, and analytics infrastructure across SaaS and enterprise environments. Experienced in outbound orchestration, lead enrichment, funnel analytics, and AI-powered workflows using Python, Snowflake, dbt, Salesforce, Clay, and modern GTM tooling. Microsoft Certified: DP-700 Fabric Data Engineer Associate.
+              GTM Engineer building revenue systems, AI workflows, and analytics infrastructure across SaaS and enterprise teams — using Python, Snowflake, dbt, Salesforce, and Clay.
             </p>
 
             {/* CTA Buttons */}
@@ -84,7 +85,7 @@ const Hero = () => {
               <div className="relative aspect-square rounded-3xl overflow-hidden border-4 border-primary/30 shadow-glow">
                 <img
                   src={`${import.meta.env.BASE_URL}profile.png`}
-                  alt="Yoga Sundaram Rama Swamy - Data Scientist"
+                  alt="Yoga Sundaram Rama Swamy - GTM Engineer"
                   className="w-full h-full object-cover object-top"
                   width={380}
                   height={380}

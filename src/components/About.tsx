@@ -4,7 +4,7 @@ const About = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   const stats = [
-    { value: "5+", label: "Years Experience" },
+    { value: "6+", label: "Years Experience" },
     { value: "3.94", label: "GPA" },
   ];
 
