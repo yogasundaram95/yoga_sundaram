@@ -25,7 +25,7 @@ export const experiences = [
       "Configured QlikView dashboards tracking revenue performance, pipeline health, and regional conversion metrics, enabling sales leadership to identify funnel bottlenecks and improve forecast accuracy by 20%",
       "Implemented data validation and deployment governance frameworks using Great Expectations, Zapier, and Git across ETL and reporting systems, reducing reporting data quality issues by 25%",
       "Devised GTM workflow automations and lead-routing systems using Marketo and Gong, improving sales engagement visibility and accelerating follow-up efficiency across regional sales teams",
-      "Performed win/loss and pipeline velocity analysis on large transactional datasets, integrating CRM and marketing data into Snowflake to improve visibility into funnel conversion trends and deal progression",
+      "Performed win or loss and pipeline velocity analysis on large transactional datasets, integrating CRM and marketing data into Snowflake to improve visibility into funnel conversion trends and deal progression",
     ],
   },
   {
