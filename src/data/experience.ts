@@ -1,7 +1,7 @@
 export const experiences = [
   {
-    company: "Scale AI",
-    logo: "scaleai-logo.png",
+    company: "Stripe",
+    logo: "stripe-logo.svg",
     role: "GTM Engineer",
     location: "Remote, USA",
     period: "Jan 2026 – Present",
