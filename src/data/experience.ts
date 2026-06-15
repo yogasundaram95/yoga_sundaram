@@ -1,20 +1,5 @@
 export const experiences = [
   {
-    company: "Stripe",
-    logo: "stripe-logo.svg",
-    role: "GTM Engineer",
-    location: "Remote, USA",
-    period: "Jan 2026 – Present",
-    achievements: [
-      "Orchestrated AI-powered lead enrichment and outbound orchestration systems across Clay and 6sense, increasing marketing-qualified pipeline by 35% and reducing CAC by 22% through funnel-stage optimization",
-      "Architected production LLM applications using LangGraph, including RAG-based competitive intelligence agents and personalization systems driving a 28% increase in outbound conversion rates",
-      "Architected automation infrastructure connecting Salesforce, Segment, Webflow, and Snowflake via n8n and custom APIs, building a unified revenue data layer for real-time CAC, LTV, and funnel analytics",
-      "Designed funnel analytics models in Snowflake and dbt to track lead-to-close velocity, win-rate drivers, and pipeline leakage, improving sales forecast accuracy by 18% and shortening deal cycles by 12%",
-      "Spearheaded agentic account scoring and GTM research workflows using Apollo.io, HubSpot, and LLM-based enrichment pipelines, reducing manual territory planning and deal-risk analysis effort by 45%",
-      "Established observability and QA frameworks using LangSmith, webhook logging, and warehouse-based validation, improving workflow reliability and reducing sync failures across GTM platforms",
-    ],
-  },
-  {
     company: "Bendix Commercial Vehicle Systems",
     logo: "bendix-logo.png",
     role: "Sales Operations Data Analyst Co-Op",
