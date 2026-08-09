@@ -12,22 +12,22 @@ const CompanyLogos = () => {
   const companies: Company[] = [
     {
       name: "Cleveland State University",
-      logo: `${import.meta.env.BASE_URL}csu-logo.png`,
+      logo: "/yogasundaramramaswamy/csu-logo.png",
       alt: "Cleveland State University",
     },
     {
       name: "Bendix Commercial Vehicle Systems",
-      logo: `${import.meta.env.BASE_URL}bendix-logo.png`,
+      logo: "/yogasundaramramaswamy/bendix-logo.png",
       alt: "Bendix Commercial Vehicle Systems",
     },
     {
       name: "Amazon",
-      logo: `${import.meta.env.BASE_URL}amazon-logo.png`,
+      logo: "/yogasundaramramaswamy/amazon-logo.png",
       alt: "Amazon",
     },
     {
       name: "Gharib Shipping Services",
-      logo: `${import.meta.env.BASE_URL}gharib-logo.png`,
+      logo: "/yogasundaramramaswamy/gharib-logo.png",
       alt: "Gharib Shipping Services",
     },
   ];
