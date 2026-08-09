@@ -74,18 +74,33 @@
       window.BIE_MODE = true;
 
       const updateForBIE = () => {
-        // Update hero title: GTM Engineer -> Business Intelligence Engineer
-        document.body.innerHTML = document.body.innerHTML
-          .replace(/GTM Engineer/g, 'Business Intelligence Engineer')
-          .replace(/building revenue systems, AI workflows, and analytics infrastructure across SaaS and enterprise teams/g, 'building advanced SQL and Amazon Redshift transformations, ETL pipelines, dimensional data models, and automated reporting across Amazon-scale operational datasets')
-          .replace(/Python, Snowflake, dbt, Salesforce, Clay/g, 'Python, SQL, Redshift, Tableau, Power BI, AWS')
+        let html = document.body.innerHTML;
 
-          // Update experience - replace first few roles
-          .replace(/Startups, SaaS, & Enterprise/g, 'Data & Analytics')
-          .replace(/optimized data infrastructure supporting/g, 'built SQL and Redshift transformations supporting')
-          .replace(/orchestrated outbound/g, 'built automated ETL pipelines')
-          .replace(/Salesforce, Clay, Slack, Webhooks/g, 'Redshift, Power BI, Python, SQL')
-          .replace(/Revenue operations, lead enrichment, funnel analytics/g, 'Data warehousing, ETL, dimensional modeling, metric validation');
+        // Update hero title and description
+        html = html.replace(/GTM Engineer/g, 'Business Intelligence Engineer');
+        html = html.replace(/building revenue systems, AI workflows, and analytics infrastructure across SaaS and enterprise teams — using Python, Snowflake, dbt, Salesforce, and Clay/g, 'building advanced SQL and Amazon Redshift transformations, ETL pipelines, dimensional data models, and automated reporting across Amazon-scale operational datasets');
+
+        // Update experience section with BIE roles
+        // Replace entire experience heading and first role
+        html = html.replace(/Startups, SaaS, & Enterprise/g, 'Data & Analytics');
+
+        // Experience role replacements - update to BIE roles
+        html = html.replace(/optimized data infrastructure supporting/g, 'engineered panel time-series dataset and designed end-to-end ingestion pipelines with');
+        html = html.replace(/orchestrated outbound/g, 'designed automated ETL pipelines');
+        html = html.replace(/Salesforce, Clay, Slack, Webhooks/g, 'SharePoint, CRM, SAP HANA');
+        html = html.replace(/Revenue operations, lead enrichment, funnel analytics/g, 'Data warehousing, ETL pipelines, dimensional modeling, metric validation');
+
+        // Update skills mentions in experience
+        html = html.replace(/Outbound, GTM stack, API integrations, data design/g, 'SQL, Redshift, Power BI, ETL, Dimensional Modeling');
+        html = html.replace(/Python, Snowflake, dbt, Salesforce/g, 'Python, SQL, Redshift, Tableau, Power BI');
+
+        // Update company/role descriptions
+        html = html.replace(/Revenue systems at/g, 'BI systems at');
+        html = html.replace(/outbound conversion/g, 'reporting efficiency');
+        html = html.replace(/free-to-paid/g, 'data accuracy');
+        html = html.replace(/manual ops/g, 'query optimization');
+
+        document.body.innerHTML = html;
       };
 
       // Run on load and multiple times to catch React rendering
