@@ -18,11 +18,23 @@ const ExperienceBIE = () => {
       company: "Cleveland State University",
       location: "Cleveland, OH",
       period: "Jan 2026 – Present",
-      logo: "csu-logo.png",
+      logo: "csu-logo-new.png",
       description: [
         "Engineered a panel time-series dataset (75 AI models, 821 daily observations, 67 features) by mining and integrating heterogeneous sources (npm, HuggingFace, GitHub APIs) with Python and R ETL pipelines.",
         "Designed end-to-end ingestion pipelines with versioned schema scripts automating data collection, transformation, and validation for technology adoption forecasting models.",
         "Investigated and documented cross-source metric discrepancies (package contamination, snapshot bias, contributor-count anomalies) and established data integrity protocols that prevented downstream modeling errors.",
+      ],
+    },
+    {
+      role: "AI Trainer – Data & Analytics Domain",
+      company: "Handshake AI (Stripe)",
+      location: "Remote",
+      period: "Mar 2026 – Present",
+      logo: "handshake-logo.png",
+      description: [
+        "Conduct rubric-based evaluations of frontier LLM responses on SWE-Bench and terminal-agent benchmark tasks, grading across accuracy, reasoning, and communication dimensions with written justifications and preference rankings.",
+        "Author golden solutions, failing test cases, and challenging multi-step command-line tasks that expose model failure modes, producing evaluation data used to benchmark and improve frontier LLM performance.",
+        "Write realistic domain prompts and grading rubrics to identify where models fail on complex analytical questions, building hands-on judgment for deploying LLM-assisted anomaly investigation and reporting responsibly.",
       ],
     },
     {
