@@ -70,5 +70,30 @@
 
   <body>
     <div id="root"></div>
+    <script>
+      window.BIE_MODE = true;
+
+      const updateForBIE = () => {
+        // Update hero title: GTM Engineer -> Business Intelligence Engineer
+        document.body.innerHTML = document.body.innerHTML
+          .replace(/GTM Engineer/g, 'Business Intelligence Engineer')
+          .replace(/building revenue systems, AI workflows, and analytics infrastructure across SaaS and enterprise teams/g, 'building advanced SQL and Amazon Redshift transformations, ETL pipelines, dimensional data models, and automated reporting across Amazon-scale operational datasets')
+          .replace(/Python, Snowflake, dbt, Salesforce, Clay/g, 'Python, SQL, Redshift, Tableau, Power BI, AWS')
+
+          // Update experience - replace first few roles
+          .replace(/Startups, SaaS, & Enterprise/g, 'Data & Analytics')
+          .replace(/optimized data infrastructure supporting/g, 'built SQL and Redshift transformations supporting')
+          .replace(/orchestrated outbound/g, 'built automated ETL pipelines')
+          .replace(/Salesforce, Clay, Slack, Webhooks/g, 'Redshift, Power BI, Python, SQL')
+          .replace(/Revenue operations, lead enrichment, funnel analytics/g, 'Data warehousing, ETL, dimensional modeling, metric validation');
+      };
+
+      // Run on load and multiple times to catch React rendering
+      window.addEventListener('load', () => setTimeout(updateForBIE, 100));
+      setTimeout(updateForBIE, 500);
+      setTimeout(updateForBIE, 1000);
+      setTimeout(updateForBIE, 2000);
+      setTimeout(updateForBIE, 3000);
+    </script>
   </body>
 </html>
