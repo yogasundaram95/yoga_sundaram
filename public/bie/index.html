@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga Sundaram Rama Swamy | Business Intelligence Engineer</title>
+    <meta name="description" content="Business Intelligence Engineer with 6+ years building SQL, Amazon Redshift, and BI solutions. Expert in data warehousing, ETL pipelines, dimensional modeling, and analytics dashboards.">
+    <meta name="keywords" content="Business Intelligence Engineer, Data Analyst, SQL, Amazon Redshift, ETL, Tableau, Power BI, Data Warehouse, AWS, Dimensional Modeling">
+    <meta name="author" content="Yoga Sundaram Rama Swamy">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yogasundaram95.github.io/yogasundaramramaswamy/bie/">
+    <meta property="og:title" content="Yoga Sundaram Rama Swamy | Business Intelligence Engineer">
+    <meta property="og:description" content="6+ years building SQL, Redshift, and BI dashboards. Expert in dimensional modeling, ETL pipelines, and self-service analytics.">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://yogasundaram95.github.io/yogasundaramramaswamy/bie/">
+    <meta name="twitter:title" content="Yoga Sundaram Rama Swamy | Business Intelligence Engineer">
+    <meta name="twitter:description" content="6+ years building SQL, Redshift, and BI dashboards. Expert in dimensional modeling, ETL pipelines, and self-service analytics.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap">
+
+    <style>
+        :root {
+            --background: 220 30% 12%;
+            --foreground: 0 0% 100%;
+            --card: 220 25% 16%;
+            --primary: 215 100% 55%;
+            --muted-foreground: 0 0% 90%;
+            --border: 220 20% 25%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: hsl(210, 30%, 85%);
+            background: hsl(var(--background));
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        a {
+            color: hsl(var(--primary));
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-h-screen display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, hsl(var(--background)), hsl(220 25% 16%));
+            z-index: 1;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(2px 2px at 20px 30px, white, transparent),
+                radial-gradient(2px 2px at 60px 70px, white, transparent),
+                radial-gradient(1px 1px at 50px 50px, white, transparent),
+                radial-gradient(1px 1px at 130px 80px, white, transparent),
+                radial-gradient(2px 2px at 90px 10px, white, transparent),
+                radial-gradient(1px 1px at 10px 90px, white, transparent);
+            background-size: 200px 200px;
+            opacity: 0.3;
+            animation: twinkle 4s ease-in-out infinite;
+            z-index: 2;
+        }
+
+        .glow {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            animation: pulse 4s ease-in-out infinite;
+            z-index: 2;
+        }
+
+        .glow-1 {
+            width: 400px;
+            height: 400px;
+            background: hsl(var(--primary) / 0.05);
+            top: 25%;
+            right: 25%;
+        }
+
+        .glow-2 {
+            width: 320px;
+            height: 320px;
+            background: hsl(0 90% 60% / 0.08);
+            top: 33%;
+            left: 33%;
+            animation-delay: 0.8s;
+        }
+
+        .glow-3 {
+            width: 256px;
+            height: 256px;
+            background: hsl(var(--primary) / 0.1);
+            bottom: 25%;
+            left: 25%;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 800px;
+        }
+
+        .greeting {
+            font-size: 1.25rem;
+            color: hsl(var(--muted-foreground));
+            margin-bottom: 16px;
+            animation: slideUp 0.8s ease-out 0.2s both;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.2;
+            animation: slideUp 0.8s ease-out 0.4s both;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary) / 0.7));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-title {
+            font-size: 2rem;
+            color: hsl(var(--muted-foreground));
+            margin-bottom: 32px;
+            animation: slideUp 0.8s ease-out 0.6s both;
+        }
+
+        .hero-description {
+            font-size: 1.125rem;
+            color: hsl(var(--muted-foreground));
+            max-width: 600px;
+            margin-bottom: 32px;
+            line-height: 1.7;
+            animation: slideUp 0.8s ease-out 0.8s both;
+        }
+
+        .stat-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 32px;
+            animation: slideUp 0.8s ease-out 0.9s both;
+        }
+
+        .stat-chip {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 16px;
+            background: hsl(var(--primary) / 0.1);
+            border: 1px solid hsl(var(--primary) / 0.2);
+            border-radius: 9999px;
+            font-size: 0.9rem;
+        }
+
+        .stat-value {
+            font-weight: 700;
+            color: hsl(var(--primary));
+        }
+
+        .stat-label {
+            color: hsl(var(--muted-foreground));
+        }
+
+        .hero-cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            animation: slideUp 0.8s ease-out 1s both;
+        }
+
+        .btn {
+            padding: 14px 32px;
+            border-radius: 6px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: hsl(var(--primary));
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: hsl(var(--primary) / 0.9);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid hsl(var(--muted-foreground));
+            color: hsl(var(--muted-foreground));
+        }
+
+        .btn-secondary:hover {
+            border-color: hsl(var(--primary));
+            color: hsl(var(--primary));
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0;
+            position: relative;
+            z-index: 5;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 48px;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .metric-card {
+            padding: 24px;
+            border-radius: 16px;
+            background: hsl(var(--card));
+            border: 1px solid hsl(var(--border));
+            transition: all 0.3s;
+        }
+
+        .metric-card:hover {
+            border-color: hsl(var(--primary) / 0.3);
+        }
+
+        .metric-value {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: hsl(var(--primary));
+        }
+
+        .metric-label {
+            font-size: 0.875rem;
+            color: hsl(var(--muted-foreground));
+            margin-top: 8px;
+            line-height: 1.4;
+        }
+
+        .about-title {
+            color: hsl(var(--primary));
+            font-size: 0.875rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .about-heading {
+            font-size: 3rem;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .about-text p {
+            margin-bottom: 16px;
+            color: hsl(var(--muted-foreground));
+            line-height: 1.8;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .skill-card {
+            padding: 28px;
+            background: hsl(var(--card));
+            border: 1px solid hsl(var(--border));
+            border-radius: 12px;
+            transition: all 0.3s;
+        }
+
+        .skill-card:hover {
+            border-color: hsl(var(--primary) / 0.3);
+        }
+
+        .skill-card h3 {
+            color: hsl(var(--primary));
+            margin-bottom: 16px;
+        }
+
+        .skill-card p {
+            color: hsl(var(--muted-foreground));
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Experience Section */
+        .experience-item {
+            margin-bottom: 48px;
+            padding-bottom: 48px;
+            border-bottom: 1px solid hsl(var(--border));
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 24px;
+            margin-bottom: 16px;
+        }
+
+        .experience-header h3 {
+            color: hsl(var(--primary));
+            margin-bottom: 8px;
+        }
+
+        .experience-company {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .experience-meta {
+            font-size: 0.95rem;
+            color: hsl(var(--muted-foreground));
+        }
+
+        .experience-dates {
+            white-space: nowrap;
+            color: hsl(var(--muted-foreground));
+            font-size: 0.95rem;
+        }
+
+        .bullets {
+            list-style: none;
+            margin-top: 16px;
+        }
+
+        .bullets li {
+            margin-bottom: 12px;
+            padding-left: 24px;
+            position: relative;
+            color: hsl(var(--muted-foreground));
+            line-height: 1.6;
+        }
+
+        .bullets li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: hsl(var(--primary));
+            font-weight: bold;
+        }
+
+        /* Projects */
+        .project-item {
+            margin-bottom: 48px;
+            padding-bottom: 48px;
+            border-bottom: 1px solid hsl(var(--border));
+        }
+
+        .project-item:last-child {
+            border-bottom: none;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 24px;
+            margin-bottom: 12px;
+        }
+
+        .project-header h3 {
+            color: hsl(var(--primary));
+        }
+
+        .project-year {
+            white-space: nowrap;
+            color: hsl(var(--muted-foreground));
+            font-size: 0.95rem;
+        }
+
+        .project-tech {
+            font-size: 0.9rem;
+            color: hsl(var(--muted-foreground));
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            padding: 48px 0;
+            text-align: center;
+            border-top: 1px solid hsl(var(--border));
+            color: hsl(var(--muted-foreground));
+        }
+
+        footer p {
+            margin-bottom: 12px;
+        }
+
+        footer a {
+            margin: 0 12px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-title {
+                font-size: 1.5rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-heading {
+                font-size: 1.875rem;
+            }
+
+            section h2 {
+                font-size: 1.875rem;
+            }
+
+            .experience-header,
+            .project-header {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .experience-dates,
+            .project-year {
+                text-align: left;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="glow glow-3"></div>
+
+        <div class="container">
+            <div class="hero-content">
+                <p class="greeting">Hello, I'm</p>
+                <h1>
+                    <span class="gradient-text">Yoga Sundaram</span><br>
+                    <span class="gradient-text">Rama Swamy</span>
+                </h1>
+                <p class="hero-title">Business Intelligence Engineer</p>
+
+                <p class="hero-description">
+                    BI Engineer with 6+ years building advanced SQL and Amazon Redshift transformations, ETL pipelines, dimensional data models, and automated reporting across Amazon-scale operational datasets.
+                </p>
+
+                <div class="stat-chips">
+                    <div class="stat-chip">
+                        <span class="stat-value">6+</span>
+                        <span class="stat-label">years BI experience</span>
+                    </div>
+                    <div class="stat-chip">
+                        <span class="stat-value">40%</span>
+                        <span class="stat-label">reporting efficiency gain</span>
+                    </div>
+                    <div class="stat-chip">
+                        <span class="stat-value">99%+</span>
+                        <span class="stat-label">metric accuracy</span>
+                    </div>
+                </div>
+
+                <div class="hero-cta">
+                    <a href="#experience" class="btn btn-primary">View Experience</a>
+                    <a href="resume.pdf" class="btn btn-secondary" download>Download Resume (PDF)</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="metrics">
+                    <div class="metric-card">
+                        <div class="metric-value">6+</div>
+                        <div class="metric-label">Years BI & Data experience</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">40%</div>
+                        <div class="metric-label">Reporting efficiency gain</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">99%+</div>
+                        <div class="metric-label">Metric accuracy maintained</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">100K+</div>
+                        <div class="metric-label">Records managed weekly</div>
+                    </div>
+                </div>
+
+                <div class="about-text">
+                    <span class="about-title">About Me</span>
+                    <h2 class="about-heading">
+                        Transforming data
+                        <br>
+                        <span class="gradient-text">into insights</span>
+                    </h2>
+                    <p>Business Intelligence Engineer / Data Analyst with 6+ years building advanced SQL and Amazon Redshift transformations, ETL pipelines, dimensional data models, and automated reporting across Amazon-scale operational datasets.</p>
+                    <p>Deep experience in Amazon QuickSight, Tableau, and Power BI dashboards supporting Weekly Operational Reviews (WBR) and leadership scorecards; skilled in metric validation and reconciliation, root-cause investigation of metric discrepancies, and applying generative AI / LLM-assisted analytics for anomaly investigation and self-service reporting.</p>
+
+                    <div style="margin-top: 32px; padding-top: 32px; border-top: 1px solid hsl(var(--border));">
+                        <div style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 9999px; background: hsl(var(--primary) / 0.1); border: 1px solid hsl(var(--primary) / 0.2); font-size: 0.875rem;">
+                            <span style="color: hsl(var(--primary)); font-weight: 600;">Microsoft Certified</span>
+                            <span style="color: hsl(var(--muted-foreground));">DP-700 Fabric Data Engineer Associate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>SQL & Warehousing</h3>
+                    <p>Advanced SQL, Amazon Redshift (query optimization, transformations), MySQL, SQL Server, Snowflake, Oracle, Dimensional Modeling, Star Schema, ETL/ELT Pipelines, dbt</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>BI & Visualization</h3>
+                    <p>Amazon QuickSight, Tableau, Power BI (DAX, Power Query), Advanced Excel, Executive Scorecards, WBR/QBR Reporting, Self-Service Dashboards</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Programming & Statistics</h3>
+                    <p>Python (Pandas, NumPy, Scikit-learn), R (tidyverse, statsmodels), VBA, Statistical Analysis, Time-Series, Regression</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Cloud & DevOps</h3>
+                    <p>AWS (Redshift, S3, EC2, Lambda), Azure Fabric, Git</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>AI & Data Quality</h3>
+                    <p>LLM-Assisted Analytics, Anomaly Detection & Investigation, Metric Validation & Reconciliation, Data Governance, Automated Validation Checks, Power Automate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2>Professional Experience</h2>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <h3>Research Assistant – AI Model Adoption</h3>
+                        <div class="experience-company">Cleveland State University</div>
+                        <div class="experience-meta">Cleveland, OH</div>
+                    </div>
+                    <div class="experience-dates">Jan 2026 – Present</div>
+                </div>
+                <ul class="bullets">
+                    <li>Engineered a panel time-series dataset (75 AI models, 821 daily observations, 67 features) by mining and integrating heterogeneous sources (npm, HuggingFace, GitHub APIs) with Python and R ETL pipelines.</li>
+                    <li>Designed end-to-end ingestion pipelines with versioned schema scripts automating data collection, transformation, and validation for technology adoption forecasting models.</li>
+                    <li>Investigated and documented cross-source metric discrepancies and established data integrity protocols that prevented downstream modeling errors.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <h3>Data Analyst & BI (Sales Operations Co-op)</h3>
+                        <div class="experience-company">Bendix Commercial Vehicle Systems</div>
+                        <div class="experience-meta">Avon, OH</div>
+                    </div>
+                    <div class="experience-dates">Jan 2025 – Dec 2025</div>
+                </div>
+                <ul class="bullets">
+                    <li>Designed automated ETL pipelines extracting from multiple upstream source systems (SharePoint, CRM, SAP HANA), applying SQL transformation and validation logic across 100K+ records with zero-error migration.</li>
+                    <li>Built star-schema data models and staging layers in Power BI; defined governance standards (documented KPI definitions, DAX measures, automated validation checks) sustaining 99%+ metric accuracy for leadership reporting.</li>
+                    <li>Built automated SQL reporting pipelines for monthly business reviews, reducing recurring report preparation from 6 hours to 25 minutes and improving on-time delivery.</li>
+                    <li>Automated survey and data refresh workflows via Power Automate, saving 2.36 hours/day; resolved data quality issues through EDA, increasing reporting reliability by 35%.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <h3>Machine Learning Data Analyst</h3>
+                        <div class="experience-company">Amazon Development Centre</div>
+                        <div class="experience-meta">Chennai, India</div>
+                    </div>
+                    <div class="experience-dates">Nov 2019 – Mar 2023</div>
+                </div>
+                <ul class="bullets">
+                    <li>Wrote and optimized complex Amazon Redshift SQL transformations and data quality tests across large, multidimensional operational datasets, improving pipeline reliability and contributing to a 40% gain in downstream ML model accuracy.</li>
+                    <li>Designed real-time KPI dashboards in Amazon QuickSight tracking 10+ operational metrics, cutting reporting lag 40% and enabling self-service metric exploration for non-technical audiences.</li>
+                    <li>Validated and reconciled metrics before leadership reviews; applied statistical analysis and SQL EDA to isolate performance drivers, driving 20% higher customer satisfaction and 15% higher retention.</li>
+                    <li>Led onboarding and best practices for 20+ analysts, standardizing SQL patterns, dashboard usage, and data quality SOPs; maintained 99.8% accuracy across 100,000+ records in weekly reporting.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <h3>Data Analyst</h3>
+                        <div class="experience-company">Gharib Shipping Services LLC</div>
+                        <div class="experience-meta">Chennai, India</div>
+                    </div>
+                    <div class="experience-dates">Jul 2017 – Oct 2019</div>
+                </div>
+                <ul class="bullets">
+                    <li>Conducted exploratory data analysis on 70,000+ historical records using SQL to identify bottlenecks in warehouse and shipping operations, improving efficiency by 15% and reducing monthly costs by $2K.</li>
+                    <li>Built and maintained recurring operational reports and data validation frameworks supporting leadership decisions; established data consistency standards across multiple operational systems.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>Selected Projects</h2>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <h3>AI Model Adoption – Panel Time-Series Forecasting</h3>
+                    <div class="project-year">2026</div>
+                </div>
+                <div class="project-tech">Python, R, pandas, statsmodels</div>
+                <ul class="bullets">
+                    <li>Integrated 5+ heterogeneous sources (npm, HuggingFace, GitHub, AIID) into automated ingestion pipelines with documented data quality controls, supporting technology adoption forecasting across 75 AI models.</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <h3>Digital Divide: Broadband & Social Vulnerability</h3>
+                    <div class="project-year">2025</div>
+                </div>
+                <div class="project-tech">R, Python, SQL, Tableau, ArcGIS</div>
+                <ul class="bullets">
+                    <li>Built multi-source SQL and R pipelines joining FCC, CDC, and Microsoft datasets across 3,000+ U.S. counties; visualized broadband disparity insights in interactive Tableau dashboards with parameters and drill-downs.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Yoga Sundaram Rama Swamy. All rights reserved.</p>
+            <div>
+                <a href="mailto:yogasundaram95@gmail.com">Email</a>
+                <a href="https://github.com/yogasundaram95" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/yogasundaram" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
