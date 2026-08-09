@@ -2,10 +2,6 @@
   "buildCommand": "npm run build:dev",
   "rewrites": [
     {
-      "source": "/bie/(.*)",
-      "destination": "/bie/index.html"
-    },
-    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

@@ -1,101 +1,255 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Preconnect to Google Fonts for faster font loading -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
-    <!-- Preload critical fonts -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'" />
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" /></noscript>
-
-    <!-- Primary Meta Tags -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yoga Sundaram Rama Swamy | Business Intelligence Engineer</title>
-    <meta name="title" content="Yoga Sundaram Rama Swamy | Business Intelligence Engineer" />
-    <meta name="description" content="Business Intelligence Engineer with 6+ years of experience building SQL, Amazon Redshift transformations, ETL pipelines, and data warehousing solutions. Expertise in dimensional modeling, Tableau, Power BI, and AWS." />
-    <meta name="keywords" content="Business Intelligence Engineer, Data Analyst, SQL, Amazon Redshift, ETL, Tableau, Power BI, Data Warehouse, AWS, Dimensional Modeling, Cleveland State University" />
-    <meta name="author" content="Yoga Sundaram Rama Swamy" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://yogasundaram95.github.io/yogasundaramramaswamy/bie/" />
+    <meta name="description" content="Business Intelligence Engineer with 6+ years building SQL, Amazon Redshift transformations, ETL pipelines, and dimensional data models.">
+    <meta name="keywords" content="Business Intelligence Engineer, Data Analyst, SQL, Redshift, ETL, Tableau, Power BI, AWS">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://yogasundaram95.github.io/yogasundaramramaswamy/bie/" />
-    <meta property="og:title" content="Yoga Sundaram Rama Swamy | Business Intelligence Engineer" />
-    <meta property="og:description" content="Business Intelligence Engineer with 6+ years building SQL, Redshift, and BI dashboards. Expert in dimensional modeling, ETL pipelines, and data warehousing." />
-    <meta property="og:image" content="https://yogasundaram95.github.io/yogasundaramramaswamy/profile.png" />
-    <meta property="og:site_name" content="Yoga Sundaram Portfolio" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="Yoga Sundaram Rama Swamy | Business Intelligence Engineer">
+    <meta property="og:description" content="6+ years building SQL, Redshift, and BI solutions. Expert in data warehousing and analytics.">
+    <meta property="og:image" content="https://yogasundaram95.github.io/yogasundaramramaswamy/profile.png">
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://yogasundaram95.github.io/yogasundaramramaswamy/bie/" />
-    <meta name="twitter:title" content="Yoga Sundaram Rama Swamy | Business Intelligence Engineer" />
-    <meta name="twitter:description" content="Business Intelligence Engineer with 6+ years building SQL, Redshift, and BI dashboards. Expert in dimensional modeling, ETL pipelines, and data warehousing." />
-    <meta name="twitter:image" content="https://yogasundaram95.github.io/yogasundaramramaswamy/profile.png" />
-    <meta name="twitter:creator" content="@yogasundaram" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/yogasundaramramaswamy/favicon.svg" />
-    <link rel="icon" type="image/x-icon" href="/yogasundaramramaswamy/favicon.ico" />
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Yoga Sundaram Rama Swamy",
-      "jobTitle": "Business Intelligence Engineer",
-      "url": "https://yogasundaram95.github.io/yogasundaramramaswamy/bie/",
-      "sameAs": [
-        "https://linkedin.com/in/yogasundaram",
-        "https://github.com/yogasundaram95"
-      ],
-      "alumniOf": {
-        "@type": "CollegeOrUniversity",
-        "name": "Cleveland State University"
-      }
-    }
-    </script>
-    <script type="module" crossorigin src="/yogasundaramramaswamy/assets/index-BmNFKg2H.js"></script>
-    <link rel="stylesheet" crossorigin href="/yogasundaramramaswamy/assets/index-CHDyBdlO.css">
+        html { scroll-behavior: smooth; }
 
-    <!-- BIE Customization Script -->
-    <script>
-      // Mark this as BIE mode so the app can adapt
-      window.BIE_MODE = true;
+        body {
+            font-family: 'Inter', sans-serif;
+            color: hsl(210, 30%, 85%);
+            background: hsl(220 30% 12%);
+            line-height: 1.6;
+        }
 
-      // Wait for React to render, then modify hero section
-      const modifyHeroForBIE = () => {
-        // Change hero title from "GTM Engineer" to "Business Intelligence Engineer"
-        const titleElements = document.querySelectorAll('[aria-label*="GTM Engineer"], h1, p');
-        titleElements.forEach(el => {
-          if (el.textContent?.includes('GTM Engineer')) {
-            el.textContent = el.textContent.replace('GTM Engineer', 'Business Intelligence Engineer');
-          }
-        });
+        h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', sans-serif; }
 
-        // Modify hero description if needed
-        const descElements = document.querySelectorAll('p');
-        descElements.forEach(el => {
-          if (el.textContent?.includes('GTM Engineer building revenue')) {
-            el.textContent = 'BI Engineer with 6+ years building advanced SQL and Amazon Redshift transformations, ETL pipelines, dimensional data models, and automated reporting across Amazon-scale operational datasets.';
-          }
-        });
-      };
+        a { color: hsl(215 100% 55%); text-decoration: none; }
+        a:hover { text-decoration: underline; }
 
-      // Run on load
-      window.addEventListener('load', modifyHeroForBIE);
-      // Also try immediately in case content is already there
-      setTimeout(modifyHeroForBIE, 500);
-      setTimeout(modifyHeroForBIE, 1500);
-    </script>
-  </head>
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
-  <body>
-    <div id="root"></div>
-  </body>
+        /* Hero */
+        .hero {
+            min-h-screen;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(180deg, hsl(220 30% 12%), hsl(220 25% 16%));
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(2px 2px at 20px 30px, white, transparent),
+                radial-gradient(2px 2px at 60px 70px, white, transparent),
+                radial-gradient(1px 1px at 50px 50px, white, transparent),
+                radial-gradient(1px 1px at 130px 80px, white, transparent),
+                radial-gradient(2px 2px at 90px 10px, white, transparent);
+            background-size: 200px 200px;
+            opacity: 0.2;
+            animation: twinkle 4s ease-in-out infinite;
+            z-index: 1;
+        }
+
+        .glow {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            animation: pulse 4s ease-in-out infinite;
+            z-index: 1;
+        }
+
+        .glow-1 { width: 400px; height: 400px; background: hsl(215 100% 55% / 0.05); top: 25%; right: 25%; }
+        .glow-2 { width: 320px; height: 320px; background: hsl(0 90% 60% / 0.08); top: 33%; left: 33%; animation-delay: 0.8s; }
+        .glow-3 { width: 256px; height: 256px; background: hsl(215 100% 55% / 0.1); bottom: 25%; left: 25%; animation-delay: 1.5s; }
+
+        @keyframes twinkle { 0%, 100% { opacity: 0.6; } 50% { opacity: 1; } }
+        @keyframes pulse { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 800px;
+        }
+
+        .greeting { font-size: 1.25rem; color: hsl(0 0% 90%); margin-bottom: 16px; animation: slideUp 0.8s ease-out 0.2s both; }
+
+        .hero h1 { font-size: 4.5rem; font-weight: 700; margin-bottom: 24px; line-height: 1.2; animation: slideUp 0.8s ease-out 0.4s both; }
+
+        .gradient-text { background: linear-gradient(135deg, hsl(215 100% 55%), hsl(215 100% 55% / 0.7)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+        .hero-title { font-size: 2rem; color: hsl(0 0% 90%); margin-bottom: 32px; animation: slideUp 0.8s ease-out 0.6s both; }
+
+        .hero-description { font-size: 1.125rem; color: hsl(0 0% 90%); max-width: 600px; margin-bottom: 32px; line-height: 1.7; animation: slideUp 0.8s ease-out 0.8s both; }
+
+        .stat-chips { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px; animation: slideUp 0.8s ease-out 0.9s both; }
+
+        .stat-chip { display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: hsl(215 100% 55% / 0.1); border: 1px solid hsl(215 100% 55% / 0.2); border-radius: 9999px; font-size: 0.9rem; }
+
+        .stat-value { font-weight: 700; color: hsl(215 100% 55%); }
+
+        .hero-cta { display: flex; flex-wrap: wrap; gap: 16px; animation: slideUp 0.8s ease-out 1s both; }
+
+        .btn { padding: 14px 32px; border-radius: 6px; font-weight: 600; border: none; cursor: pointer; font-size: 1rem; transition: all 0.2s; }
+
+        .btn-primary { background: hsl(215 100% 55%); color: white; }
+        .btn-primary:hover { background: hsl(215 100% 55% / 0.9); text-decoration: none; }
+
+        .btn-secondary { background: transparent; border: 2px solid hsl(0 0% 90%); color: hsl(0 0% 90%); }
+        .btn-secondary:hover { border-color: hsl(215 100% 55%); color: hsl(215 100% 55%); text-decoration: none; }
+
+        /* Sections */
+        section { padding: 80px 0; position: relative; z-index: 5; }
+        section h2 { font-size: 2.5rem; margin-bottom: 48px; }
+
+        .skill-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+        .skill-card { padding: 28px; background: hsl(220 25% 16%); border: 1px solid hsl(220 20% 25%); border-radius: 12px; }
+        .skill-card h3 { color: hsl(215 100% 55%); margin-bottom: 16px; }
+        .skill-card p { color: hsl(0 0% 90%); font-size: 0.95rem; line-height: 1.6; }
+
+        .experience-item { margin-bottom: 48px; padding-bottom: 48px; border-bottom: 1px solid hsl(220 20% 25%); }
+        .experience-item:last-child { border-bottom: none; }
+        .experience-item h3 { color: hsl(215 100% 55%); margin-bottom: 8px; }
+        .experience-company { font-weight: 600; margin-bottom: 4px; }
+        .experience-meta { font-size: 0.95rem; color: hsl(0 0% 90%); }
+        .experience-dates { color: hsl(0 0% 90%); font-size: 0.95rem; }
+
+        .bullets { list-style: none; margin-top: 16px; }
+        .bullets li { margin-bottom: 12px; padding-left: 24px; position: relative; color: hsl(0 0% 90%); line-height: 1.6; }
+        .bullets li::before { content: '▸'; position: absolute; left: 0; color: hsl(215 100% 55%); font-weight: bold; }
+
+        footer { padding: 48px 0; text-align: center; border-top: 1px solid hsl(220 20% 25%); color: hsl(0 0% 90%); }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero-title { font-size: 1.5rem; }
+            .btn { width: 100%; text-align: center; }
+            section h2 { font-size: 1.875rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="glow glow-3"></div>
+
+        <div class="container">
+            <div class="hero-content">
+                <p class="greeting">Hello, I'm</p>
+                <h1><span class="gradient-text">Yoga Sundaram<br>Rama Swamy</span></h1>
+                <p class="hero-title">Business Intelligence Engineer</p>
+
+                <p class="hero-description">
+                    BI Engineer with 6+ years building advanced SQL and Amazon Redshift transformations, ETL pipelines, dimensional data models, and automated reporting across Amazon-scale operational datasets.
+                </p>
+
+                <div class="stat-chips">
+                    <div class="stat-chip"><span class="stat-value">6+</span> <span>years BI</span></div>
+                    <div class="stat-chip"><span class="stat-value">40%</span> <span>efficiency gain</span></div>
+                    <div class="stat-chip"><span class="stat-value">99%+</span> <span>accuracy</span></div>
+                </div>
+
+                <div class="hero-cta">
+                    <a href="#experience" class="btn btn-primary">View Experience</a>
+                    <a href="resume.pdf" class="btn btn-secondary" download>Download Resume (PDF)</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <div class="skill-grid">
+                <div class="skill-card">
+                    <h3>SQL & Warehousing</h3>
+                    <p>Advanced SQL, Amazon Redshift, Snowflake, MySQL, SQL Server, Dimensional Modeling, Star Schema, ETL/ELT Pipelines, dbt</p>
+                </div>
+                <div class="skill-card">
+                    <h3>BI & Visualization</h3>
+                    <p>Amazon QuickSight, Tableau, Power BI, Advanced Excel, Executive Scorecards, WBR/QBR Reporting, Self-Service Dashboards</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Programming</h3>
+                    <p>Python (Pandas, NumPy), R (tidyverse), VBA, Statistical Analysis, Time-Series Analysis, Regression</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Cloud & DevOps</h3>
+                    <p>AWS (Redshift, S3, EC2, Lambda), Azure Fabric, Git, Data Governance</p>
+                </div>
+                <div class="skill-card">
+                    <h3>AI & Data Quality</h3>
+                    <p>LLM-Assisted Analytics, Anomaly Detection, Metric Validation, Data Governance, Power Automate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+        <div class="container">
+            <h2>Professional Experience</h2>
+
+            <div class="experience-item">
+                <h3>Research Assistant – AI Model Adoption</h3>
+                <div class="experience-company">Cleveland State University</div>
+                <div class="experience-meta">Cleveland, OH • Jan 2026 – Present</div>
+                <ul class="bullets">
+                    <li>Engineered panel time-series dataset (75 AI models, 821 daily observations) with Python and R ETL pipelines</li>
+                    <li>Designed end-to-end ingestion pipelines with data quality controls for technology adoption forecasting</li>
+                    <li>Established data integrity protocols preventing downstream modeling errors</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Data Analyst & BI (Sales Operations Co-op)</h3>
+                <div class="experience-company">Bendix Commercial Vehicle Systems</div>
+                <div class="experience-meta">Avon, OH • Jan 2025 – Dec 2025</div>
+                <ul class="bullets">
+                    <li>Designed automated ETL pipelines from SharePoint, CRM, SAP HANA with zero-error migration of 100K+ records</li>
+                    <li>Built star-schema data models in Power BI maintaining 99%+ metric accuracy for leadership reporting</li>
+                    <li>Reduced monthly report preparation from 6 hours to 25 minutes; automated workflows saving 2.36 hours/day</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Machine Learning Data Analyst</h3>
+                <div class="experience-company">Amazon Development Centre</div>
+                <div class="experience-meta">Chennai, India • Nov 2019 – Mar 2023</div>
+                <ul class="bullets">
+                    <li>Optimized complex Amazon Redshift SQL transformations improving pipeline reliability and ML accuracy by 40%</li>
+                    <li>Designed real-time KPI dashboards in Amazon QuickSight tracking 10+ operational metrics across high-volume streams</li>
+                    <li>Led onboarding for 20+ analysts, maintaining 99.8% accuracy across 100,000+ records in weekly reporting</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Yoga Sundaram Rama Swamy. Business Intelligence Engineer.</p>
+            <div style="margin-top: 16px;">
+                <a href="mailto:yogasundaram95@gmail.com">Email</a> •
+                <a href="https://github.com/yogasundaram95" target="_blank">GitHub</a> •
+                <a href="https://linkedin.com/in/yogasundaram" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>
