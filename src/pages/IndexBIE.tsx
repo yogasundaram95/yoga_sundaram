@@ -10,7 +10,6 @@ const Testimonials = lazy(() => import("@/components/Testimonials"));
 const Skills = lazy(() => import("@/components/SkillsBIE"));
 const Education = lazy(() => import("@/components/Education"));
 const Certifications = lazy(() => import("@/components/Certifications"));
-const CompanyLogos = lazy(() => import("@/components/CompanyLogos"));
 const Contact = lazy(() => import("@/components/Contact"));
 const Footer = lazy(() => import("@/components/Footer"));
 
@@ -40,7 +39,6 @@ const IndexBIE = () => {
           <Skills />
           <Education />
           <Certifications />
-          <CompanyLogos />
           <Contact />
         </Suspense>
       </main>

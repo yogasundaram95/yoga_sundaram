@@ -6,6 +6,7 @@ interface ExperienceItem {
   location: string;
   period: string;
   description: string[];
+  logo?: string;
 }
 
 const ExperienceBIE = () => {
@@ -17,6 +18,7 @@ const ExperienceBIE = () => {
       company: "Cleveland State University",
       location: "Cleveland, OH",
       period: "Jan 2026 – Present",
+      logo: "csu-logo.png",
       description: [
         "Engineered a panel time-series dataset (75 AI models, 821 daily observations, 67 features) by mining and integrating heterogeneous sources (npm, HuggingFace, GitHub APIs) with Python and R ETL pipelines.",
         "Designed end-to-end ingestion pipelines with versioned schema scripts automating data collection, transformation, and validation for technology adoption forecasting models.",
@@ -28,6 +30,7 @@ const ExperienceBIE = () => {
       company: "Bendix Commercial Vehicle Systems",
       location: "Avon, OH",
       period: "Jan 2025 – Dec 2025",
+      logo: "bendix-logo.png",
       description: [
         "Designed automated ETL pipelines extracting from multiple upstream source systems (SharePoint, CRM, SAP HANA), applying SQL transformation and validation logic across 100K+ records with zero-error migration, 2 weeks ahead of schedule.",
         "Built star-schema data models and staging layers in Power BI; defined governance standards (documented KPI definitions, DAX measures, automated validation checks) sustaining 99%+ metric accuracy for leadership reporting.",
@@ -40,6 +43,7 @@ const ExperienceBIE = () => {
       company: "Amazon Development Centre",
       location: "Chennai, India",
       period: "Nov 2019 – Mar 2023",
+      logo: "amazon-logo.png",
       description: [
         "Wrote and optimized complex Amazon Redshift SQL transformations and data quality tests across large, multidimensional operational datasets, improving pipeline reliability and contributing to a 40% gain in downstream ML model accuracy.",
         "Designed real-time KPI dashboards in Amazon QuickSight tracking 10+ operational metrics across high-volume streams, cutting reporting lag 40% and enabling self-service metric exploration for non-technical audiences.",
@@ -52,6 +56,7 @@ const ExperienceBIE = () => {
       company: "Gharib Shipping Services LLC",
       location: "Chennai, India",
       period: "Jul 2017 – Oct 2019",
+      logo: "gharib-logo.png",
       description: [
         "Conducted exploratory data analysis on 70,000+ historical records using SQL to identify bottlenecks in warehouse and shipping operations, improving efficiency by 15% and reducing monthly costs by $2K.",
         "Independently built and maintained recurring operational reports and data validation frameworks supporting leadership decisions; established data consistency standards across multiple operational systems.",
@@ -93,14 +98,28 @@ const ExperienceBIE = () => {
                   }}
                 >
                   <div className="mb-4">
-                    <h3 className="font-display text-2xl font-bold text-foreground mb-2">
-                      {exp.role}
-                    </h3>
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                    <div className="flex items-center gap-3 mb-3">
+                      {exp.logo ? (
+                        <div className="w-14 h-14 rounded-xl bg-white p-1.5 flex items-center justify-center overflow-hidden flex-shrink-0">
+                          <img
+                            src={`/yogasundaramramaswamy/${exp.logo}`}
+                            alt={`${exp.company} logo`}
+                            className="w-full h-full object-contain"
+                            loading="lazy"
+                            width={44}
+                            height={44}
+                          />
+                        </div>
+                      ) : null}
                       <div>
-                        <p className="font-semibold text-foreground">{exp.company}</p>
-                        <p className="text-sm text-muted-foreground">{exp.location}</p>
+                        <h3 className="font-display text-2xl font-bold text-foreground">
+                          {exp.role}
+                        </h3>
+                        <p className="font-semibold text-foreground text-sm">{exp.company}</p>
                       </div>
+                    </div>
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                      <p className="text-sm text-muted-foreground">{exp.location}</p>
                       <p className="text-sm text-muted-foreground font-semibold whitespace-nowrap">
                         {exp.period}
                       </p>
