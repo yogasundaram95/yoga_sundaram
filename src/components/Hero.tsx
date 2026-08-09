@@ -47,7 +47,7 @@ const Hero = () => {
               className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-8 animate-fade-up opacity-0"
               style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}
             >
-              GTM Engineer
+              Business Intelligence Engineer
             </p>
 
             {/* Description */}
@@ -55,7 +55,7 @@ const Hero = () => {
               className="text-muted-foreground max-w-xl text-base md:text-lg leading-relaxed mb-6 animate-fade-up opacity-0"
               style={{ animationDelay: "0.8s", animationFillMode: "forwards" }}
             >
-              GTM Engineer building revenue systems, AI workflows, and analytics infrastructure across SaaS and enterprise teams — using Python, Snowflake, dbt, Salesforce, and Clay.
+              BI Engineer with 6+ years building advanced SQL and Amazon Redshift transformations, ETL pipelines, dimensional data models, and automated reporting across Amazon-scale operational datasets.
             </p>
 
             {/* Stat chips */}
@@ -64,9 +64,9 @@ const Hero = () => {
               style={{ animationDelay: "0.9s", animationFillMode: "forwards" }}
             >
               {[
-                { value: "28%", label: "↑ outbound conversion" },
-                { value: "31%", label: "↑ free-to-paid" },
-                { value: "45%", label: "↓ manual effort" },
+                { value: "6+", label: "years BI experience" },
+                { value: "40%", label: "efficiency gain" },
+                { value: "99%+", label: "accuracy" },
               ].map((stat) => (
                 <div
                   key={stat.label}
