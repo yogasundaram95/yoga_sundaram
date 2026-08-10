@@ -19,10 +19,10 @@ const About = () => {
           <div className="relative">
             <div className="grid grid-cols-2 gap-4">
               {[
-                { value: "28%", label: "Outbound conversion lift", color: "text-primary" },
-                { value: "31%", label: "Free-to-paid conversion", color: "text-primary" },
-                { value: "45%", label: "Reduction in manual ops effort", color: "text-usa-red" },
-                { value: "6+", label: "Years of GTM & data experience", color: "text-usa-red" },
+                { value: "40%", label: "Query performance improvement", color: "text-primary" },
+                { value: "99.8%", label: "Data accuracy & consistency", color: "text-primary" },
+                { value: "45%", label: "Faster anomaly detection", color: "text-usa-red" },
+                { value: "6+", label: "Years of BI & data experience", color: "text-usa-red" },
               ].map((metric) => (
                 <div
                   key={metric.label}
@@ -47,16 +47,16 @@ const About = () => {
               About Me
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Building revenue systems
+              Transforming data
               <br />
-              <span className="text-gradient">that close the loop</span>
+              <span className="text-gradient">into actionable insights</span>
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                GTM Engineer with 6+ years of experience building revenue systems, automation workflows, and analytics infrastructure across SaaS and enterprise environments. Experienced in outbound orchestration, lead enrichment, funnel analytics, and AI-powered workflows using Python, Snowflake, dbt, Salesforce, Clay, and modern GTM tooling.
+                Business Intelligence Engineer with 6+ years of expertise designing scalable data pipelines, building dimensional data models, and creating real-time analytics dashboards. Specialized in SQL optimization, Amazon Redshift, dbt, and cloud data warehousing across SaaS and enterprise environments.
               </p>
               <p>
-                Delivered systems that increased outbound conversion rates by 28%, improved free-to-paid conversion by 31%, and reduced manual operational effort by 45%. MS in Information Systems from Cleveland State University.
+                Delivered solutions that improved query performance by 40%, achieved 99.8% data accuracy standards, enabled 45% faster anomaly detection, and reduced manual reporting effort through automation. MS in Information Systems from Cleveland State University.
               </p>
             </div>
 
