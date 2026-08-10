@@ -55,7 +55,7 @@ const Hero = () => {
               className="text-muted-foreground max-w-xl text-base md:text-lg leading-relaxed mb-6 animate-fade-up opacity-0"
               style={{ animationDelay: "0.8s", animationFillMode: "forwards" }}
             >
-              BI Engineer with 6+ years building advanced SQL and Amazon Redshift transformations, ETL pipelines, dimensional data models, and automated reporting across Amazon-scale operational datasets.
+              BI Engineer with 6+ years of expertise in designing scalable data pipelines, building dimensional data models, and creating real-time analytics dashboards. Specialized in SQL optimization, Amazon Redshift, dbt, and cloud data warehousing. Expert in Tableau, QuickSight, and Power BI for delivering actionable business insights.
             </p>
 
             {/* Stat chips */}
@@ -64,9 +64,9 @@ const Hero = () => {
               style={{ animationDelay: "0.9s", animationFillMode: "forwards" }}
             >
               {[
-                { value: "6+", label: "years BI experience" },
-                { value: "40%", label: "efficiency gain" },
-                { value: "99%+", label: "accuracy" },
+                { value: "40%", label: "data query speed ↑" },
+                { value: "99.8%", label: "data accuracy" },
+                { value: "6+", label: "years experience" },
               ].map((stat) => (
                 <div
                   key={stat.label}
