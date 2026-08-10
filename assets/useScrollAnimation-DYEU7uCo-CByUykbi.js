@@ -1,1 +1,0 @@
-import{w as t}from"./index-Bw_Zz8Gg.js";const i=(n={})=>{const[s,u]=t.useState(!1),e=t.useRef(null);return t.useEffect(()=>{const r=new IntersectionObserver(([c])=>{c.isIntersecting&&(u(!0),e.current&&r.unobserve(e.current))},{threshold:.1,...n});return e.current&&r.observe(e.current),()=>{e.current&&r.unobserve(e.current)}},[n]),{ref:e,isVisible:s}};export{i as o};
