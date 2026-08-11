@@ -119,7 +119,7 @@ const Hero = () => {
               <div className="relative aspect-square rounded-3xl overflow-hidden border-4 border-primary/30 shadow-glow">
                 <img
                   src={`${import.meta.env.BASE_URL}profile.png`}
-                  alt="Yoga Sundaram Rama Swamy - GTM Engineer"
+                  alt="Yoga Sundaram Rama Swamy - Business Intelligence Engineer"
                   className="w-full h-full object-cover object-top"
                   width={380}
                   height={380}

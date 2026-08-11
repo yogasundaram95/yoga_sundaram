@@ -12,7 +12,7 @@ const Footer = () => {
             </p>
             <span className="hidden md:inline text-muted-foreground">•</span>
             <p className="text-muted-foreground text-sm">
-              GTM Engineer | Building revenue systems that scale
+              Business Intelligence Engineer | Building analytics systems that scale
             </p>
           </div>
           <p className="text-muted-foreground text-xs">
