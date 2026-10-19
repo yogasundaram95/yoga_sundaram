@@ -22,7 +22,7 @@ const Contact = () => {
             Let's work <span className="text-gradient">together</span>
           </h2>
           <p className="text-muted-foreground text-lg mb-10 max-w-xl mx-auto">
-            Interested in discussing business intelligence, data engineering, or analytics infrastructure?
+            Interested in discussing data science, machine learning, or business intelligence?
             I'm always open to connecting and exploring new opportunities.
           </p>
 

@@ -1,4 +1,4 @@
-import { GraduationCap, Calendar, Award } from "lucide-react";
+import { GraduationCap, Calendar, Award, Users } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { education } from "../data/education";
 
@@ -102,6 +102,14 @@ const Education = () => {
                         <div className="flex items-center gap-2">
                           <Award className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                           <span className="text-sm text-yellow-400 font-medium">{edu.scholarship as string}</span>
+                        </div>
+                      )}
+
+                      {/* Activities */}
+                      {"activities" in edu && edu.activities && (
+                        <div className="flex items-center gap-2">
+                          <Users className="w-4 h-4 text-primary flex-shrink-0" />
+                          <span className="text-sm text-foreground font-medium">{edu.activities as string}</span>
                         </div>
                       )}
 

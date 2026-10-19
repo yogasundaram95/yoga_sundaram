@@ -6,7 +6,8 @@ export const education = [
     location: "Cleveland, OH",
     period: "Aug 2023 – Dec 2025",
     gpa: "3.94/4.00",
-    scholarship: "Monte Ahuja Scholarship (up to $6,000)",
+    scholarship: "Monte Ahuja College of Business Scholarship ($6,000), 2024–2025",
+    activities: "Beta Alpha Psi (honor society): member & volunteer",
     categories: {
       "Business Intelligence": [
         "Business Intelligence Systems",
