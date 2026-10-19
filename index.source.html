@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (() => {
+        const savedTheme = localStorage.getItem("ys-bie-theme");
+        const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+        const theme = savedTheme === "light" || savedTheme === "dark" ? savedTheme : prefersLight ? "light" : "dark";
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.classList.toggle("light", theme === "light");
+        document.documentElement.classList.toggle("dark", theme !== "light");
+      })();
+    </script>
+
+    <!-- Preconnect to Google Fonts for faster font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Preload critical fonts -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" /></noscript>
+
+    <!-- Primary Meta Tags -->
+    <title>Yoga Sundaram Rama Swamy | Data Science & Business Intelligence</title>
+    <meta name="title" content="Yoga Sundaram Rama Swamy | Data Science & Business Intelligence" />
+    <meta name="description" content="Data scientist and BI analyst with 6+ years across ML training data (Amazon Alexa), forecasting and automated reporting (Bendix), and AI model evaluation (Handshake AI). Python, R, SQL, PyTorch, Snowflake, Power BI." />
+    <meta name="keywords" content="Data Scientist, Business Intelligence, Data Analyst, Machine Learning, PyTorch, SQL, Amazon Redshift, ETL, Tableau, Power BI, AWS, Data Warehouse, Dimensional Modeling, Cleveland State University" />
+    <meta name="author" content="Yoga Sundaram Rama Swamy" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://yogasundaram95.github.io/yoga_sundaram/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yogasundaram95.github.io/yoga_sundaram/" />
+    <meta property="og:title" content="Yoga Sundaram Rama Swamy | Data Science & Business Intelligence" />
+    <meta property="og:description" content="6+ years in data roles: ML data at Amazon, forecasting and BI at Bendix, AI evaluation at Handshake AI. Projects include a from-scratch VARnet replication." />
+    <meta property="og:image" content="https://yogasundaram95.github.io/yoga_sundaram/profile.png" />
+    <meta property="og:site_name" content="Yoga Sundaram Portfolio" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://yogasundaram95.github.io/yoga_sundaram/" />
+    <meta name="twitter:title" content="Yoga Sundaram Rama Swamy | Data Science & Business Intelligence" />
+    <meta name="twitter:description" content="6+ years in data roles: ML data at Amazon, forecasting and BI at Bendix, AI evaluation at Handshake AI. Projects include a from-scratch VARnet replication." />
+    <meta name="twitter:image" content="https://yogasundaram95.github.io/yoga_sundaram/profile.png" />
+    <meta name="twitter:creator" content="@yogasundaram" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Yoga Sundaram Rama Swamy",
+      "jobTitle": "Data Scientist",
+      "url": "https://yogasundaram95.github.io/yoga_sundaram",
+      "sameAs": [
+        "https://linkedin.com/in/yogasundaram",
+        "https://github.com/yogasundaram95"
+      ],
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Cleveland State University"
+      },
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Cleveland State University"
+      }
+    }
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

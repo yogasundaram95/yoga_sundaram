@@ -47,7 +47,7 @@ const Hero = () => {
               className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-8 animate-fade-up opacity-0"
               style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}
             >
-              Business Intelligence Engineer
+              Data Scientist · Business Intelligence
             </p>
 
             {/* Description */}
@@ -55,7 +55,7 @@ const Hero = () => {
               className="text-muted-foreground max-w-xl text-base md:text-lg leading-relaxed mb-6 animate-fade-up opacity-0"
               style={{ animationDelay: "0.8s", animationFillMode: "forwards" }}
             >
-              BI Engineer with 6+ years of expertise in designing scalable data pipelines, building dimensional data models, and creating real-time analytics dashboards. Specialized in SQL optimization, Amazon Redshift, dbt, and cloud data warehousing. Expert in Tableau, QuickSight, and Power BI for delivering actionable business insights.
+              6+ years across machine learning data, statistical modeling, and business intelligence at Amazon, Bendix (Knorr-Bremse), and Handshake AI. M.S. Information Systems (3.94 GPA). I build reproducible Python, R, and SQL pipelines, models that are measured honestly, and reporting that leadership actually uses.
             </p>
 
             {/* Stat chips */}
@@ -64,8 +64,8 @@ const Hero = () => {
               style={{ animationDelay: "0.9s", animationFillMode: "forwards" }}
             >
               {[
-                { value: "40%", label: "data query speed ↑" },
-                { value: "99.8%", label: "data accuracy" },
+                { value: "6 hrs → 25 min", label: "reporting automated" },
+                { value: "99.8%", label: "accuracy, 100K+ annotations" },
                 { value: "6+", label: "years experience" },
               ].map((stat) => (
                 <div

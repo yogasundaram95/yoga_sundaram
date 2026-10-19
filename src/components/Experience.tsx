@@ -56,7 +56,7 @@ const Experience = () => {
                         ) : (
                           <Briefcase className="w-5 h-5 text-usa-white" />
                         )}
-                        <span className="font-display text-xl md:text-2xl font-bold text-usa-white">{exp.company}</span>
+                        <span className="font-display text-xl md:text-2xl font-bold text-foreground">{exp.company}</span>
                       </div>
                       <h3 className="font-display text-lg md:text-xl font-semibold text-foreground group-hover:text-primary transition-all">
                         {exp.role}

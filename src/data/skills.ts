@@ -1,26 +1,23 @@
+// Kept in line with the resume: only tools used in listed roles or projects.
 export const skillCategories = [
   {
-    title: "SQL & Data Warehousing",
-    skills: ["Advanced SQL", "Query Optimization", "Complex Joins & Aggregations", "Amazon Redshift", "Snowflake", "BigQuery", "MySQL", "SQL Server", "Dimensional Modeling", "Star Schema", "Slowly Changing Dimensions", "ETL/ELT Pipelines", "dbt", "Data Vault"],
+    title: "Machine Learning & Statistics",
+    skills: ["PyTorch", "scikit-learn", "CNNs", "Wavelet & Fourier Features", "Regression", "Time-Series Forecasting", "Classification", "Customer Segmentation", "NLP & CV Training Data", "AI Model Evaluation"],
   },
   {
-    title: "Business Intelligence & Visualization",
-    skills: ["Amazon QuickSight", "Tableau", "Power BI", "Looker", "Advanced Excel", "Executive Dashboards", "Real-time KPI Monitoring", "Ad-hoc Reporting", "Data Storytelling", "Performance Tuning"],
+    title: "Programming & Statistical Computing",
+    skills: ["Python (pandas)", "R", "SQL (CTEs, window functions)", "SAS", "SPSS", "MATLAB", "VBA", "PowerShell", "Git"],
   },
   {
-    title: "Data Engineering & Pipelines",
-    skills: ["Apache Airflow", "AWS Glue", "SSIS", "Informatica", "Fivetran", "Data Validation", "Pipeline Orchestration", "Change Data Capture", "Data Quality Frameworks"],
+    title: "Data Engineering & Warehousing",
+    skills: ["ETL/ELT", "API Ingestion", "Multi-source Data Integration", "Data Validation", "Star-schema Modeling", "Snowflake", "Amazon Redshift", "SAP HANA", "Microsoft Fabric (DP-700)"],
   },
   {
-    title: "Programming & Analytics",
-    skills: ["Python", "R (tidyverse)", "VBA", "Statistical Analysis", "Time-Series Forecasting", "Regression Analysis", "Customer Segmentation", "Exploratory Data Analysis"],
+    title: "BI & Visualization",
+    skills: ["Power BI (DAX)", "Tableau", "Amazon QuickSight", "Kibana", "ArcGIS", "Excel", "Power Automate"],
   },
   {
-    title: "Cloud & Data Platforms",
-    skills: ["AWS (Redshift, S3, Glue, EC2)", "Azure (Synapse, Fabric)", "Google Cloud (BigQuery)", "SAP HANA", "Data Lakes", "Cloud Data Warehouses"],
-  },
-  {
-    title: "Data Quality & Governance",
-    skills: ["Data Validation Frameworks", "Metric Definitions", "Data Lineage", "Master Data Management", "SLA Monitoring", "Performance Benchmarking", "Documentation & Standards"],
+    title: "Cloud",
+    skills: ["AWS (S3, Lambda, SageMaker, Redshift)", "Microsoft Fabric", "Snowflake"],
   },
 ];

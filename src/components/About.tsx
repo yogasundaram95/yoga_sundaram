@@ -19,10 +19,10 @@ const About = () => {
           <div className="relative">
             <div className="grid grid-cols-2 gap-4">
               {[
-                { value: "40%", label: "Query performance improvement", color: "text-primary" },
-                { value: "99.8%", label: "Data accuracy & consistency", color: "text-primary" },
-                { value: "45%", label: "Faster anomaly detection", color: "text-usa-red" },
-                { value: "6+", label: "Years of BI & data experience", color: "text-usa-red" },
+                { value: "~93%", label: "Less report prep time (6 hrs → 25 min)", color: "text-primary" },
+                { value: "99.8%", label: "Accuracy across 100K+ ML annotations", color: "text-primary" },
+                { value: "0.987", label: "Macro F1, VARnet replication (synthetic test)", color: "text-usa-red" },
+                { value: "6+", label: "Years in data roles", color: "text-usa-red" },
               ].map((metric) => (
                 <div
                   key={metric.label}
@@ -53,10 +53,10 @@ const About = () => {
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Business Intelligence Engineer with 6+ years of expertise designing scalable data pipelines, building dimensional data models, and creating real-time analytics dashboards. Specialized in SQL optimization, Amazon Redshift, dbt, and cloud data warehousing across SaaS and enterprise environments.
+                Data scientist and BI practitioner with 6+ years in data roles: producing and quality-controlling computer vision and NLP training data for Amazon Alexa, building forecasting models and automated reporting for Sales Finance at Bendix, and evaluating AI model outputs at Handshake AI.
               </p>
               <p>
-                Delivered solutions that improved query performance by 40%, achieved 99.8% data accuracy standards, enabled 45% faster anomaly detection, and reduced manual reporting effort through automation. MS in Information Systems from Cleveland State University.
+                Highlights: cut report preparation from 6 hours to 25 minutes, held 99.8% accuracy across 100,000+ annotations, forecast unit sales across 4,000 customers, and reimplemented a published deep learning model (VARnet) from the paper alone. M.S. in Information Systems, Cleveland State University (3.94 GPA).
               </p>
             </div>
 
