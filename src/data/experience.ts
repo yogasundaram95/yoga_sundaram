@@ -41,14 +41,14 @@ export const experiences = [
   {
     company: "Amazon Development Centre",
     logo: "amazon-logo.png",
-    role: "Machine Learning Data Analyst (promoted from ML Data Associate, Oct 2020)",
+    role: "Data Associate II (Machine Learning Data Analyst), promoted from Data Associate I in Oct 2020",
     location: "Chennai, India",
     period: "Nov 2019 – Mar 2023",
     achievements: [
       "Produced and validated training data for Amazon Alexa computer vision (object detection) and NLP models in Amazon SageMaker, holding ~99.8% accuracy across 100,000+ annotations",
       "Measured quality and productivity with Amazon Redshift SQL (CTEs, window functions), tracking 10+ KPIs in QuickSight and Kibana, with statistical analysis in SAS and SPSS",
       "Built Python workflow automation routing tasks by productivity and quality (Amazon S3, AWS Lambda), raising throughput by ~10%",
-      "Promoted to ML Data Analyst within 11 months; trained and mentored 20+ associates in SQL, data analysis, and quality control",
+      "Promoted to Data Associate II within 11 months; trained and mentored 20+ associates in SQL, data analysis, and quality control",
     ],
   },
   {
