@@ -27,54 +27,49 @@ const Projects = () => {
           </h2>
         </div>
 
-        {/* Projects grid */}
-        <div className="space-y-20">
+        {/* Visual-first project grid keeps the work easy to scan and compare. */}
+        <div className="grid gap-6 sm:grid-cols-2 lg:gap-8">
           {projects.map((project, index) => (
-            <div
+            <article
               key={index}
-              className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center"
+              className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card/60 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-glow"
             >
-              {/* Project image */}
-              <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                <div className="relative group">
-                  <div className="aspect-video rounded-2xl bg-gradient-card border border-border overflow-hidden shadow-card transition-all duration-500 group-hover:shadow-glow group-hover:border-primary/30 group-hover:-translate-y-2 group-hover:scale-[1.02]">
-                    <img
-                      src={`${import.meta.env.BASE_URL}${project.image}`}
-                      alt={project.title}
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                      width={600}
-                      height={338}
-                    />
-                  </div>
-                  {/* Decorative elements */}
-                  <div className="absolute -z-10 -bottom-4 -right-4 w-full h-full rounded-2xl border border-primary/20" />
-                </div>
+              <div className="aspect-video overflow-hidden bg-gradient-card">
+                <img
+                  src={`${import.meta.env.BASE_URL}${project.image}`}
+                  alt={project.title}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                  loading="lazy"
+                  width={600}
+                  height={338}
+                />
               </div>
 
-              {/* Project info */}
-              <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+              <div className="flex flex-1 flex-col p-5 sm:p-6">
+                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
+                  Project {String(index + 1).padStart(2, "0")}
+                </p>
+                <h3 className="mb-4 font-display text-xl font-bold leading-tight text-foreground sm:text-2xl">
                   {project.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed mb-6">
+                <p className="mb-6 text-sm leading-relaxed text-muted-foreground sm:text-base">
                   {project.description}
                 </p>
 
                 {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-8">
+                <ul aria-label={`${project.title} technologies`} className="mb-7 flex flex-wrap gap-2">
                   {project.tags.map((tag, tagIndex) => (
-                    <span
+                    <li
                       key={tagIndex}
-                      className="px-3 py-1 text-sm bg-secondary text-secondary-foreground rounded-full border border-border hover:border-usa-white hover:bg-usa-white hover:text-background transition-all"
+                      className="rounded-full border border-border bg-secondary px-3 py-1 text-xs text-secondary-foreground sm:text-sm"
                     >
                       {tag}
-                    </span>
+                    </li>
                   ))}
-                </div>
+                </ul>
 
                 {/* Links */}
-                <div className="flex gap-4">
+                <div className="mt-auto flex flex-wrap gap-3">
                   {project.liveUrl && project.liveUrl !== "#" && (
                     <Button variant="glow" size="default" asChild>
                       <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
@@ -93,7 +88,7 @@ const Projects = () => {
                   )}
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>
