@@ -3,24 +3,18 @@ import { Button } from "./ui/button";
 
 const Hero = () => {
   return (
-    <section aria-label="Hero" className="min-h-screen flex flex-col justify-center relative overflow-hidden">
+    <section aria-label="Introduction" className="min-h-screen flex flex-col justify-center relative overflow-hidden py-24 md:py-28">
       {/* Background elements */}
       <div className="absolute inset-0 bg-gradient-dark" />
 
       {/* Stars background */}
       <div className="absolute inset-0 stars-bg opacity-30" />
 
-      {/* Blue glow */}
-      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse-glow" />
-
-      {/* Red glow */}
-      <div className="absolute top-1/3 left-1/3 w-80 h-80 rounded-full blur-3xl animate-pulse-glow" style={{ background: 'hsl(0 90% 60% / 0.08)', animationDelay: "0.8s" }} />
-
-      {/* Blue glow bottom */}
-      <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: "1.5s" }} />
+      {/* A single restrained accent keeps the data-led content in focus. */}
+      <div aria-hidden="true" className="absolute -top-24 right-0 h-72 w-72 rounded-full bg-primary/10 blur-3xl md:h-96 md:w-96" />
       
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
-        <div className="grid lg:grid-cols-[1fr,380px] gap-12 items-center max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-[minmax(0,1fr),340px] gap-10 lg:gap-16 items-center max-w-6xl mx-auto">
           {/* Left side - Text content */}
           <div>
             {/* Greeting */}
@@ -33,7 +27,7 @@ const Hero = () => {
 
             {/* Name */}
             <h1
-              className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-up opacity-0"
+              className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-up opacity-0"
               style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
               aria-label="Yoga Sundaram Rama Swamy"
             >
@@ -58,22 +52,24 @@ const Hero = () => {
               6+ years across machine learning data, statistical modeling, and business intelligence at Amazon, Bendix (Knorr-Bremse), and Handshake AI. M.S. Information Systems (3.94 GPA). I build reproducible Python, R, and SQL pipelines, models that are measured honestly, and reporting that leadership actually uses.
             </p>
 
-            {/* Stat chips */}
+            {/* Selected outcomes */}
             <div
-              className="flex flex-wrap gap-3 mb-10 animate-fade-up opacity-0"
+              role="group"
+              aria-label="Selected outcomes"
+              className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-10 animate-fade-up opacity-0"
               style={{ animationDelay: "0.9s", animationFillMode: "forwards" }}
             >
               {[
-                { value: "6 hrs → 25 min", label: "reporting automated" },
-                { value: "99.8%", label: "accuracy, 100K+ annotations" },
-                { value: "6+", label: "years experience" },
+                { value: "6 hrs → 25 min", label: "report preparation" },
+                { value: "99.8%", label: "quality across 100K+ annotations" },
+                { value: "0.987", label: "Macro F1 · synthetic test" },
               ].map((stat) => (
                 <div
                   key={stat.label}
-                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-sm"
+                  className="min-w-0 rounded-xl border border-border bg-card/70 px-4 py-3 shadow-card"
                 >
-                  <span className="font-display font-bold text-primary">{stat.value}</span>
-                  <span className="text-muted-foreground">{stat.label}</span>
+                  <div className="font-display text-lg font-bold leading-tight text-primary sm:text-xl">{stat.value}</div>
+                  <div className="mt-1 text-xs leading-snug text-muted-foreground sm:text-sm">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -83,37 +79,23 @@ const Hero = () => {
               className="flex flex-wrap gap-4 animate-fade-up opacity-0"
               style={{ animationDelay: "1s", animationFillMode: "forwards" }}
             >
-              <Button
-                variant="hero"
-                size="lg"
-                onClick={() => {
-                  const element = document.getElementById('projects');
-                  element?.scrollIntoView({ behavior: 'smooth' });
-                }}
-              >
-                View My Work
+              <Button variant="hero" size="lg" asChild>
+                <a href="#projects">View My Work</a>
               </Button>
-              <Button
-                variant="glow"
-                size="lg"
-                onClick={() => {
-                  const element = document.getElementById('contact');
-                  element?.scrollIntoView({ behavior: 'smooth' });
-                }}
-              >
-                Get In Touch
+              <Button variant="glow" size="lg" asChild>
+                <a href="#contact">Get In Touch</a>
               </Button>
             </div>
           </div>
 
           {/* Right side - Photo */}
           <div
-            className="relative hidden lg:block animate-fade-up opacity-0"
+            className="relative mx-auto mt-2 w-40 animate-fade-up opacity-0 sm:w-48 lg:mt-0 lg:w-auto"
             style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}
           >
             <div className="relative">
               {/* Decorative background */}
-              <div className="absolute inset-0 bg-primary/20 rounded-3xl blur-2xl" />
+                <div aria-hidden="true" className="absolute inset-0 rounded-3xl bg-primary/15 blur-2xl" />
 
               {/* Photo container */}
               <div className="relative aspect-square rounded-3xl overflow-hidden border-4 border-primary/30 shadow-glow">
@@ -128,8 +110,8 @@ const Hero = () => {
               </div>
 
               {/* Decorative elements */}
-              <div className="absolute -bottom-6 -right-6 w-24 h-24 border-2 border-usa-red rounded-3xl shadow-glow-red" />
-              <div className="absolute -top-6 -left-6 w-16 h-16 border-2 border-usa-white/40 rounded-2xl" />
+              <div aria-hidden="true" className="absolute -bottom-4 -right-4 h-16 w-16 rounded-2xl border-2 border-usa-red/80 lg:-bottom-6 lg:-right-6 lg:h-24 lg:w-24 lg:rounded-3xl" />
+              <div aria-hidden="true" className="absolute -top-4 -left-4 h-12 w-12 rounded-xl border border-usa-white/40 lg:-top-6 lg:-left-6 lg:h-16 lg:w-16 lg:rounded-2xl" />
             </div>
           </div>
         </div>
@@ -137,19 +119,13 @@ const Hero = () => {
       
       {/* Scroll indicator */}
       <div
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-fade-in opacity-0"
+        className="absolute bottom-4 left-1/2 -translate-x-1/2 animate-fade-in opacity-0 md:bottom-8"
         style={{ animationDelay: "1.5s", animationFillMode: "forwards" }}
       >
-        <button
-          onClick={() => {
-            const element = document.getElementById('about');
-            element?.scrollIntoView({ behavior: 'smooth' });
-          }}
-          className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors cursor-pointer bg-transparent border-none p-0"
-        >
+        <a href="#about" className="flex flex-col items-center gap-2 rounded-md p-2 text-muted-foreground transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
           <span className="text-sm tracking-widest uppercase">Scroll</span>
-          <ArrowDown className="w-5 h-5 animate-float" />
-        </button>
+          <ArrowDown aria-hidden="true" className="w-5 h-5" />
+        </a>
       </div>
     </section>
   );
